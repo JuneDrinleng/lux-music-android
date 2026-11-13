@@ -118,3 +118,7 @@ S:`src/server/api/data.ts` 另外有 **PAT scope 鉴权**的 `/api/v1/playlists`
 5. 后续能力的规则语法和完整 RPC；线上 server 版本若与本证据提交不同，应先重新核对并更新契约 fixture，不要求修改 server 来迁就客户端。
 
 这些未知项是 [ROADMAP](ROADMAP.md) 第 0 阶段的验收输入。全部结论为文档设计与静态阅读结果，本 PR 没有声称完成端到端验证。
+
+## 账号方案的进一步约束（2026-11-13）
+
+[ACCOUNT-AUTH](ACCOUNT-AUTH.md) 明确 AccountSession 是唯一账号端口、登录和注册都附设备信息、注册直接使用返回凭据、退出调用 POST /api/auth/logout；这三项当前 server 已支持，无需等待 P0/P1。原生只使用 sid 绑定的 accessToken，不把旧 token 当新会话替身；refreshToken 轮换不确定时不重放。当前 GET /id 的稳定身份适配与拟在 server-info 增加 serverId 需区分，后者必须经 June 批准另开 server PR。v1 是否做本地模式/LX、账号上限及离线撤销租约仍待定；完整 P0/P1 为提案，不是本文已实现 API 的补充保证。
