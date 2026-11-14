@@ -63,3 +63,5 @@ Android Lint GetInstance 会拒绝 AES-ECB。原 LX v4 的 src/utils/tools.ts �
 补充检查：fixture --check 重新执行上游函数并确认无漂移；build-logic test/validatePlugins、三项架构负例、官方 wrapper 和 APK 元数据/签名检查通过。APK ZIP 中不含 vectors.json、Node oracle 或 message2call 测试包；HTML 保持与 main 相同。
 
 构建内存上限调整为 Gradle 2 GiB、Kotlin daemon 1 GiB、最多两个 worker，以控制多 JVM 峰值；不将其视为应用性能测试结果。
+
+CI SDK 引导使用 scripts/setup_android_ci.py，显式定位 command-line tools 19.0，不依赖 runner 的 PATH。工具缺失时下载官方 build 13114758，先验证固定 SHA-256，再安装 API 36/build-tools 36.0.0，校验实际文件并向后续步骤导出 SDK 目录。已在本地实测；该修正针对远端 runner 的 sdkmanager 不在 PATH 问题。
