@@ -8,4 +8,6 @@ Lux Music 的原生 Android 项目，采用 Kotlin、Jetpack Compose、Hilt 和 
 - [资料与连接](docs/ACCOUNT-AUTH.md) · [LX 协议](docs/SYNC-CONTRACT.md) · [开发发布](docs/RELEASE-FLOW.md)
 - [设计规范](design.md) · [HTML 基准](ui/index.html) · [调研证据](research/README.md)
 
-当前交付为研究与文档，没有 Android 工程、APK 或已启用的 Actions。工程基础、LX 联调及核心功能按路线图分 PR 推进；不能将文档方案理解为已实现兼容。
+Stage 1 已建立可构建的原生工程和 debug APK，包含 Hilt、模块边界、格式/静态分析、Android Lint 和 PR CI 配置。启动页目前仅为基准画布；LX、音源、播放、资料库和完整 HTML 页面尚未实现。
+
+构建与验证命令见 [Stage 1](docs/STAGE-1.md)。本地验证已通过；远端检查与保护启用按路线图分别记录。
