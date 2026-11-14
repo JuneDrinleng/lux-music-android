@@ -1,14 +1,43 @@
 # 仓库协作规则
 
-- 用中文沟通、编写架构与实现说明。采用小 PR，每个 PR 只解决一个可验收的问题；先查 git status/log 与已有 PR，续做不重复开 PR、不覆盖已有工作。
-- 所有后续变更只走任务分支 → PR。唯一直接推 `main` 的授权已在 2026-11-13 用于只含 README 的初始提交 `2080e375c85848287ff15f838130b3edf83330c2`，已经用完。此后永不直接推 `main`，不得 force push。
-- 先优化整体架构，再开发功能。以 docs/ARCHITECTURE.md 为核心提案；第 0 阶段须 June 明确批准后开始，验收后才写功能，不将文档 PR 的批准解释为功能授权。
-- lux-music-mobile 只用于功能与真实协议对照，不作为架构蓝本；不得带入 RN 兼容 shim、重复状态/缓存、多层 repository、占位模块、旧设置和遗留迁移。v1 默认不导入 RN 本地数据。
-- lux-music-server 原样复用；接口事实引用真实文件与提交，不编造端点、数量或功能。未知处标“待确认”；工作量一律标“粗估”。
-- 分支与发布按 docs/RELEASE-FLOW.md 的提案规划：main 稳定、dev 集成、codex/* 或 cursor/* 功能分支；功能 squash 入 dev，dev→main 用 merge commit。启用、建立 dev、CI/workflow 和保护规则仅在第 0 阶段经 June 批准后另案实施；June 亲手配置 secrets/保护/发布环境。当前任务不得创建 dev、添加 workflow 或执行发布。
-- 本轮仅更新同一 codex/roadmap 分支和 PR #1 的文档，不另开 PR；不得加入 Kotlin/Gradle/资源/CI 文件。不要合并 PR、发版、打 tag、建 release、删除分支/tag/release 或修改仓库设置。
-- 不读取/打印凭据文件、token、key、webhook 地址、全量环境变量或完整进程参数。不发邮件、不联系任何人，不执行 npm install；临时输出放 /dev/shm 或 /tmp，避免大量小文件。
-- 参照工作树 `/workspace/codex-dev/playdetail-fixed-lyric-height` 与 `/workspace/codex-dev/_base-server` 严格只读，即使环境允许写入，也不得修改、提交、推送或清理它们。
-- 2026-11-13 已决定 minSdk 33、targetSdk 36，不再列为待确认，不降低 minSdk。参考资料原样归档于 docs/references/，其旧 SDK/杂志风/模块堆建议不覆盖本仓库决策；按 ARCHITECTURE 的采纳/舍弃表执行，不复制外部代码或许可证。
-- 视觉设计与交互由开发 Bot 本人负责，先从 awesome-design-md 选定非杂志风 DESIGN.md，再做无后端/mock 数据的 Web 原型，经 June 签字后才进入 Android 实现。Codex 不写颜色、字体、布局或 DESIGN.md；docs/design/ 只保留占位说明。
-- 账号遵守 docs/ACCOUNT-AUTH.md：一个 AccountStore/AccountSession 状态源、每账号独立库、Keystore 密文、原地切换、过期可稍后离线。登录/注册必须带设备字段，注册直接用返回凭据，登出必须请求 server logout；不得只清本地后声称远端已撤销。server P0/P1 只是提案，须 June 批准后另开 server PR，本仓库不改 server。
+- 用中文沟通和编写说明。先读 plan.md、docs/ARCHITECTURE.md、docs/ROADMAP.md；用户最新明确指令优先于历史研究。
+- 已确定：LX 首版、Lux 后续；minSdk 33、compileSdk/targetSdk 36、Hilt、cn.lux.music.android、本机模式、ProfileSession 单一状态、资料分库。首版不添加 Lux REST 认证/注册/refresh 或未来空模块。
+- mobile 仅作功能与真实协议对照，不复制 RN bridge、历史迁移、重复状态、占位源或厂商 flavor；v1 不读取 RN 私有数据。
+- 上游 LX/Lux server 保持只读，不改代码以适配客户端；未来后端变更另案，不阻塞 LX。
+- main 稳定、dev 集成；功能 squash 入 dev，转正及 main 回合并 dev 用 merge commit。不得直接推 main/dev、force push、移动已发布 tag。
+- 当前沿用 codex/roadmap / PR #1 交付文档，保留 main 的 ui/。工程与功能按后续独立小 PR 推进；不得把文档状态写为应用完成。合并、tag、Release、secrets、保护与发布环境不由本轮文档提交执行。
+- 连接页按 docs/design/README.md 补充并审阅，其余 HTML 继续 1:1。不重新选择全站视觉风格，不用 WebView 实现主应用。
+- 不读取或打印凭据、全量环境变量/进程参数，不向他人发送消息。只读参考工作树不得修改、清理或提交。
+- 精确工具链在骨架 PR 构建验证后锁定。发行需经过协议/设备/签名/恢复测试，不能把静态检查叫端到端通过。
+- docs/future/ 与原始 research/ 为证据归档；历史五账号上限、撤销租约、首版 Lux 前置、单 main、低 SDK 等建议均已失效。
+
+## 前端目标：1:1 复刻
+
+本项目必须 **1:1 复刻 `ui/` 中 HTML 前端的界面、布局、交互、状态、动效、资源及反馈**，覆盖所有主页面、子页面、播放器、歌词、评论、队列、弹窗与条件状态。只复刻首页、只有视觉风格相似、只有静态界面均不满足要求。
+
+开始任何前端任务前，必须阅读：
+
+1. 本文件。
+2. [design.md](design.md)。
+3. [ui/index.html](ui/index.html) 中相关页面、完整 CSS 级联、数据与实际事件处理；不能只看截图、最初的样式块或旧注释。
+
+`ui/index.html` 是可执行设计基准，`design.md` 是提炼后的实现与验收规范。发生冲突时，以用户最新明确要求为先，其次是 HTML 最终级联与实际行为，并同步修正文档。当前最终配色是米白与苔绿的大地色系，不是源码前部的蓝色或紫色版本。
+
+## 实现限制
+
+- 未经用户明确要求，不得重设计、简化、重排、删减页面或交互；不得用默认 Android/Material 组件外观代替原型。
+- 必须还原字体层级、尺寸、间距、圆角、阴影、渐变、透明度、封面裁剪、图标路径、文案、内容顺序、截断方式、选中/按下/空状态和层叠关系。
+- 使用原 HTML 中的 MingCute 3.1.0 图标及资源，保留 [许可](ui/assets/mingcute-LICENSE.txt)；不替换为近似图标、随机图片或 emoji。
+- 必须保留导航/返回栈、Tab 滚动记忆、播放状态跨组件同步、歌词与进度、收藏/歌单、搜索、统计、设置和所有预览提示。以注册布局覆盖后的事件为准。
+- 原型中的模拟操作也属于前端契约；需还原它的提示、示例状态或弹窗，不得做成无反馈按钮。真实登录、同步、下载、音频、导入导出等服务按用户另行要求接入，不因复刻任务自动扩展。
+- Android 原生实现需映射逻辑尺寸、字体与安全区；不把预览手机壳当应用 UI，不重复绘制系统状态栏，不用“平台默认”解释可避免的视觉差异。
+- 保护 `ui/` 基准：不得为适配实现或通过对比而修改 HTML、资源、数据；只有用户明确要求修改设计基准时才更新，并同步维护规范。
+- 对源码未定义的异常路径可做不改变正常体验的防崩溃处理。需要新增可见设计、流程或改变基准时，先列明差异向用户说明，不能自行决定为“优化”。
+
+## 验证与交付
+
+- 按 `design.md` 第 9 节维护页面/状态对照，使用一致数据、视口、播放时间和滚动位置，对照 HTML 截图及交互结果。
+- 覆盖全部主页面、二级页面、覆盖层和关键状态；同时检查窄屏、底部安全区、滚动末端和返回路径。逐一修复可见布局、资源和行为差异。
+- 每次交付说明修改内容、实际执行的验证和剩余差异。没有运行浏览器/模拟器/设备就明确说明，不能声称“已 1:1 验收”。
+- 当前仓库尚无 Android 工程；工程按 plan.md 的 Kotlin/Compose 原生架构实施。
+- 未经用户要求，不自动向远程推送、合并或发布；本地文件可先完成并供检查。

@@ -15,16 +15,16 @@
 | 行歌词、逐字、翻译/罗马音 | `src/plugins/lyric.ts` 使用 lrc-file-parser 并合并 words/translation/roma；`src/screens/PlayDetail/Vertical/Lyric.tsx`、`Horizontal/Lyric.tsx` 呈现 | 共享不可变歌词时间轴 + 播放时钟；Compose 响应式布局；去重见 A11 | 粗估中至高 |
 | 桌面悬浮歌词 | `android/app/src/main/java/cn/lux/music/mobile/lyric/LyricView.java` 配置悬浮窗类型/锁定透明度 | 后续独立评审 overlay 权限、服务与触摸限制，见 A3；非 MVP | 粗估高 |
 | 评论 | `src/utils/musicSdk/tx/index.js` 引入 comment；`src/screens/index.ts` 注册 Comment 页面 | Catalog 目录扩展 + feature 页面；外部可用性单独验收 | 粗估中 |
-| 登录、资料、设备会话、空间管理 | `src/screens/Account/AccountPage.tsx` 接入资料、sessions/password/spaces；`src/utils/luxAuthApi.ts` 刷新与状态校验 | data Session 状态机 + Account 页面；保留隔离，避免多份登录状态 | 粗估高 |
+| 登录、资料、设备会话、空间管理 | `src/screens/Account/AccountPage.tsx` 接入资料、sessions/password/spaces；`src/utils/luxAuthApi.ts` 刷新与状态校验 | Lux 后续专项；首版仅本机/LX ProfileSession 与连接管理，不展示 Lux 入口 | 粗估高 |
 | server 歌单/不喜欢同步 | `src/plugins/sync/client/modules/list/handler.ts`、`src/plugins/sync/client/sync/handler.ts` 实现数据交换/协商；`src/core/sync.ts` 选择冲突模式 | 唯一数据层内部 sync 包；歌单属 MVP，不喜欢规则后置；见 SYNC-CONTRACT 与 A16 | 粗估高 |
-| 听歌历史与跨设备同步 | `src/plugins/sync/playHistorySync.ts` 在 Lux 模式与协商就绪后 pull/push，隔离服务器/用户游标 | 本地 PlayRecord + 经协商的增量游标；MVP 后启用 | 粗估高 |
+| 听歌历史与跨设备同步 | `src/plugins/sync/playHistorySync.ts` 在 Lux 模式与协商就绪后 pull/push，隔离服务器/用户游标 | 先本地 PlayRecord；跨设备历史为 Lux 后续，不虚报 LX 能力 | 粗估高 |
 | 月报、年度报告与分享 | `src/components/stats/MonthlyReportPage.tsx` 计算月份报告与分享；`src/utils/shareCard/reports.ts` 的 annualShareReport 按年份聚合/去重 | 基于同一历史表的纯函数统计 + Compose 报告/分享图；时区与边界测试 | 粗估中至高 |
 | 推荐、相似歌曲、私人电台 | `src/utils/recommend/index.ts` 组装历史、不喜欢、local/platformSources，导出 daily/similar/radio | MVP 后单独设计推荐策略；输入同一事实源，不复制旧缓存与转换链 | 粗估高 |
 | 一起听、房间角色/连接状态 | `src/store/together/action.ts` 设置房间快照、host/member、connection；`src/plugins/sync/client/client.ts` 处理 together_sync_finished | 后续会话级房间状态与 PlaybackControl 协调；独立 ADR，非歌单同步的前置 | 粗估高 |
 | 均衡器、响度、无缝播放 | `src/screens/AudioEffects/index.tsx` 按 native capability 提供预览/提交；`src/plugins/player/index.ts` 恢复这些设置 | 后续 Media3 音效链，能力检测与回滚；不展示不能生效的开关 | 粗估高 |
 | 白噪音 | `src/core/player/whiteNoise.ts` 串行修改 noise，明确不在进程启动自动播放 | 后续独立音轨/混音所有权设计，不能隐式多建播放器 | 粗估高 |
 | 主题、布局、设置 | `src/config/defaultSetting.ts` 定义 theme/light/dark、字体/布局与播放偏好；`src/theme/themes/index.ts` 消费自动主题 | 原生精简设置 schema 与 Compose theme；每项有消费者再加入，A7/A13/A14 | 粗估中 |
-| 发布渠道 | `.github/workflows/ci.yml`、`.github/workflows/release.yml` 对 dev/master 分流 | 仅路线图提案；是否建立 dev 与发布 CI 由 June 决定 | 粗估中 |
+| 发布渠道 | `.github/workflows/ci.yml`、`.github/workflows/release.yml` 对 dev/master 分流 | 已确定 dev/main；开发自动预发布、main 审批稳定版，按 RELEASE-FLOW 实施 | 粗估中 |
 | 失败占位源、旧迁移、旧文件选择器 | `src/utils/musicSdk/xm.js`、`src/config/migrate.ts`、`src/config/migrateSetting.ts`、`src/plugins/storage.ts`、`src/components/common/ChoosePath/index.tsx` | 不作为功能 parity 目标；按 [审计](LEGACY-AUDIT.md) A6–A8/A12/A14 丢弃或重设计 | 粗估低（不引入），如有导入例外另估 |
 
 本表是已读入口的能力盘点，未来每个功能 PR 需以用户操作和失败恢复验收；不是支持所有 mobile 设置的承诺，也不是列出相同目录就宣称完成 parity。MVP 与先后顺序以 [ROADMAP](ROADMAP.md) 为准。
