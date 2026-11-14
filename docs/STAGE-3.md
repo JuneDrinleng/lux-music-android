@@ -14,7 +14,7 @@
 | wrapper-java-3.2.3.jar | 2f795c28787ecf77b7081fdc9764ce75dc7f9d39402c56b09161625d3ce97de3 |
 | wrapper-java-3.2.3-sources.jar | a2f895e3195a6c7b408032848a2ed410e36f512821fe4b1b39ca83e89a9d4955 |
 
-实际 AAR 提供 arm64-v8a、armeabi-v7a、x86、x86_64；各 PT_LOAD 的 p_align 为 0x4000。debug 工程明确保留前三种目标中的 **arm64-v8a、armeabi-v7a、x86_64**，排除 x86；两个 ARM ABI 用于手机，x86_64 用于模拟器。最终 APK 的所有原生库（包括 AndroidX 传递库）均须通过 ELF 与 ZIP 16 KB 对齐检查，不能只验 QuickJS。
+实际 AAR 提供 arm64-v8a、armeabi-v7a、x86、x86_64；各 PT_LOAD 的 p_align 为 0x4000。debug 工程明确保留 **arm64-v8a、armeabi-v7a、x86_64**，排除 x86；两个 ARM ABI 用于手机，x86_64 用于模拟器。最终 APK 的所有原生库（包括 AndroidX 传递库）均须通过 ELF 与 ZIP 16 KB 对齐检查，不能只验 QuickJS。
 
 Java 发布源码提供 `setMemoryLimit`、`setMaxStackSize`，未提供执行 interrupt API。只读架构参考为 [quickjs-wrapper c5f5027](https://github.com/HarlonWang/quickjs-wrapper/tree/c5f5027aafe754108fcb4af12e183a7633c39e85)；这不是发布二进制的可重现构建证明。QuickJS Wrapper Apache-2.0、QuickJS MIT 声明随应用分发。依赖 AAR 夹带的五个开发样例从应用 assets 中排除。
 
@@ -55,7 +55,18 @@ python3 scripts/verify_native.py
 
 本地完整 verify、Android 测试 APK 构建、18 项 LX 回归 + 2 项信任检查（0 失败、0 跳过）、3 项构建策略测试、3 项架构违规负例、2 项 ELF 规则正反例、wrapper 及最终 APK 元数据/签名/对齐检查通过。HTML 与父阶段相同。
 
-本地安装模拟器镜像时磁盘不足，且没有 `/dev/kvm`，因此本地没有设备测试结果。构建、静态检查与远端设备结果分别记录，不能互相替代。首轮远端模拟器发现目录与 AVD 创建目录不同，尚未运行测试即退出；已显式固定 ANDROID_AVD_HOME/ANDROID_USER_HOME 和实例路径。第二轮 API 33 实际执行 6 项：隔离、死循环/微任务终止、取消并发、内存/恢复 4 项通过，2 项 preload 因默认 console 抛错失败；已补显式静默配置，后续结果另记。
+本地没有 `/dev/kvm`，且镜像解压曾因磁盘不足失败，因此不提供本地设备运行声明。远端已固定 AVD 创建/发现目录，并配置绑定默认 console；最终设备结果如下。
+
+[Verify #6](https://github.com/JuneDrinleng/lux-music-android/actions/runs/43610838003) 验证代码提交 `1dc835263b9889b90f2ba4503139bb9dcf2952ed`（PR 合成提交 `b71e932b13b8fc90f34667747466992bfe686d05`）：构建、两个设备 job、聚合 required-checks 全部通过。已下载 JUnit 与设备证据复核，不只依据 job 的绿色图标。
+
+| 设备 | 实测页大小 | JUnit |
+| --- | --- | --- |
+| API 33 / x86_64 / default revision 2 | 4096 | 6 项，0 失败、0 错误、0 跳过 |
+| API 36 / x86_64 / google_apis_ps16k revision 7 | 16384 | 6 项，0 失败、0 错误、0 跳过 |
+
+[带耳机图标的 debug APK](https://github.com/JuneDrinleng/lux-music-android/actions/runs/43610838003/artifacts/14120576711) 可下载，Actions 保留 7 天；不是正式 Release，界面仍为启动画布。彩色/单色图标的 APK 解码 RGBA 像素均与仓库 PNG 一致。
+
+以上通过的是引擎与隔离验证基座。完整原生 ABI、外部脚本、宿主代理及 ARM 真机仍须在音源功能接入前继续验证，不把内部 probe 注册成可用音源。
 
 ## 用户图标
 
