@@ -2,7 +2,7 @@
 
 ## 1. 目标与已定选择
 
-首版围绕本机模式与原版 LX Music 同步服务完成音乐核心闭环。Lux Server 的登录、注册、刷新和扩展能力后续实施。用户已确认方案并要求推进；当前 PR #1 交付规范收敛，工程与功能按后续小 PR 推进。
+首版围绕本机模式与原版 LX Music 同步服务完成音乐核心闭环。Lux Server 的登录、注册、刷新和扩展能力后续实施。用户已确认方案并要求推进；规范收敛保留在 PR #1，工程与功能按后续独立 Stage PR 推进；各阶段的实际进度见第 4 节及 docs/ROADMAP.md。
 
 - Kotlin、Compose、Hilt；minSdk 33，compileSdk/targetSdk 36。
 - 首先兼容固定版本 LX v4 协议，服务端保持原样。

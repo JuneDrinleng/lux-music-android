@@ -83,6 +83,8 @@ internal class QuickJsSandboxService : Service() {
         return QuickJSContext.create().use { context ->
             context.setMemoryLimit(32 * 1024 * 1024)
             context.setMaxStackSize(512 * 1024)
+            // The binding's default console throws unless configured. Keep script logs private.
+            context.evaluate("console.stdout = function() {}; void 0;", "host.js")
             // No Java callbacks, module loader, std/os module, network or filesystem bridge.
             val initial = context.evaluate(script, "source.js")
             if (initial is JSObject) initial.release()
