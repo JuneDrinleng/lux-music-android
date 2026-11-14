@@ -1,0 +1,4325 @@
+{
+  "constants": {
+    "hello": "Hello~::^-^::~v4~",
+    "idPrefix": "OjppZDo6",
+    "connect": "lx-music connect"
+  },
+  "provenance": {
+    "lx": "d47aca4284a7c4d9ef755df1f44fb0b0a5b2af36",
+    "message2call": {
+      "version": "0.1.3",
+      "integrity": "sha512-jOOPKWTE5LMfuxz8D1o186ex+kJl7FgRz033Z371kvyfZDyCn+qhtrsIvgf4kPUf4zYAWM2SU4GFWbA7F2U+Ag==",
+      "distSha256": "e60f226619e81a0c700aeb72ede193cd14ca5e0d119c7830dd97fb89381b623e"
+    },
+    "node": "v24.22.1",
+    "sourceHashes": {
+      "src/constants.ts": "05bd5e272780355194a351158507b051e0a0f496c5cc87a1835f71901dcf7a2b",
+      "src/utils/tools.ts": "753e4204bd72dd76d9579debda4ae54db5ae7f6878b7247acc0e6b3d66627659",
+      "src/utils/index.ts": "06db7de174a54ea0db37e60c42dde78ce63dec1cfe032174b312251a92e9d19d",
+      "src/server/auth.ts": "0e1805d7ea70ff3dbe49fda9652f87ca4567f6daf78d6056c2aece1fbdded73e",
+      "src/server/sync/sync.ts": "f086362771bfcfea3a9376dffe7abff208efeeadc5bc58bb7a259563b8b18464",
+      "src/modules/list/utils.ts": "d2af9f076880eae478fe9554b8ed1a69f2d116c4e041641a67fe511567df6782",
+      "src/modules/list/sync/sync.ts": "0c8eccb4d8633d8cc951d58e3d50d9de61e8980846ce0cd95d70148a80439f4f",
+      "package-lock.json": "bd0c1c353384438e40ab04ee66d1014422145337a810b63058ba40853b2a1bfa"
+    }
+  },
+  "keys": {
+    "purpose": "PUBLIC TEST MATERIAL ONLY; never use as a real account or key",
+    "publicDer": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2+8F1S2MQlHrzswaOjaVuXQ3OGOcyagCTYBSvduhOoMTSiSQRsq3TQqd61aIJgl/X/beRn1WLFHCRzGBC3X8GTROIUnY4YFSNpkuVtyfQpt36QCz+9sQTssasb82Syt1OqYiTCQxFilXcp6edmLB4UMBaYpi/euYmhUWFX1jB/kt97FPVaIPlNrjk//TMjKxpTkuQJ+O8Vwp7bjyxvrRVgs0WDudtX6FuigYQQKTcMU/EVzTepCWvcsjbMhRoZYmtXd7tSbM74uKDl9bTJhfiURlyaIYmNd6naIOG2vdWyu7WNDgHayN3BaV5458pVCG09cHnF0kfVXrJTdn5QPeKwIDAQAB",
+    "privateDer": "MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDb7wXVLYxCUevOzBo6NpW5dDc4Y5zJqAJNgFK926E6gxNKJJBGyrdNCp3rVogmCX9f9t5GfVYsUcJHMYELdfwZNE4hSdjhgVI2mS5W3J9Cm3fpALP72xBOyxqxvzZLK3U6piJMJDEWKVdynp52YsHhQwFpimL965iaFRYVfWMH+S33sU9Vog+U2uOT/9MyMrGlOS5An47xXCntuPLG+tFWCzRYO521foW6KBhBApNwxT8RXNN6kJa9yyNsyFGhlia1d3u1Jszvi4oOX1tMmF+JRGXJohiY13qdog4ba91bK7tY0OAdrI3cFpXnjnylUIbT1wecXSR9VeslN2flA94rAgMBAAECggEALAAgextPNc987VURJDdacg1ppMrtCb0mpMm5BAnmMjYaDFnPUZJp5KxslrIrr+xzgsf5hUG7FUfQJf0l85yJsKMxxGApV0hPoeO4jSE7bZB8B24gFBGqLBFfSFNYceaCYBbvwqr09RmVSLWqP0YXwtDsfeh1UJarY5w3XFpHD0dwdGFBcHNe8fn85AmriyPkat4LT+gQRrkAb54/YOIv6viCWH8t9xpcke5LnOHLnMCmA1cP3AnJBLl8Fbju84gRRWR1eWvq58Zl3sTz8nfwR6HWPnH4I4wl52KQrWBp6UIuNj2ajCkIFyBbzlzM144nzcLjJZNr0hm6LVevTzT4uQKBgQDubrkXBADyeW1V7ZMBlbTLc7bJmNreuip6iS8YOqKyAvNn0/JU3Qop/i/pAJDBWxfAreHDQrXB2jDpY/iDCONTw0GJgKRai5YVkcrIRtWhD02Jp6Dzw8fT3krRppgEhyfQq7CzpvrSf7a8moR4KFNxmNkbyHY+/JDaAZsY31FeEwKBgQDsI2CzcsHH4lkuhkk2sfNrCQ37iNfoMA/k7/E6YiPWtWboSmyEk4aDWC48/mdTfpHhYTlgvJd1w4rnRjoOzftBWaOcKVVtCXIKTCmGbjYLDS3poPXqWuN6M2qkg+EgxhygP8VHqBcwFkf9pGGmmxiRIICwzgsMe+M8t5oR814iiQKBgB2hBL8ncDaxgDS9YRdBU0Y1CvHiXNBwsfaoNYH9R1p3o2ezntmM3kZ5n9qEh3h/qWP4N6XcFFoSkyFtmuQtppIyIWLE6aeW0P+9LkXVB5cMH8aLXiTsn1hkt0d2PE3Tvc7ghwTMKz8dP8gQK4YC/NuQ8unQ72DEYfu1V2Cv35yhAoGAEsTJFdpELrf98KW5wgAo4dQJaXm593mCeebcXJCaWqF2eXYY4/y5z0y9+Bkca1V/ENPidJ7oxvJw4usBCFY05z/RskLSyGTczJa7IjU2VHCKuqwRf7wToo3dpw/YX/t/IPmQm55voWHT/QQIwu5G6JoVwHfQBwD90cCiHVUjoUkCgYAv7S2qneby3nLl32SZnnnS/8h2KhMo8KjM6p1xn4Frd6gaXLmPiFWyFfHzpJkuBmhRueu+VdItuX1ZMXoWKWThPjR1qTJuev5Vit9vmr4yql6BRJVYi7RiUPUDHbM2Dm50lN2fwL6o8UFLfUWK5/t0OVQa8i4Wn38aqb740tzfBQ=="
+  },
+  "auth": {
+    "code": "fixture-连接码-123",
+    "derived": "MzQzODRiN2QwNTBiOWEwZQ==",
+    "initialText": "lx-music auth::\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2+8F1S2MQlHrzswaOjaVuXQ3OGOcyagCTYBSvduhOoMTSiSQRsq3TQqd61aIJgl/X/beRn1WLFHCRzGBC3X8GTROIUnY4YFSNpkuVtyfQpt36QCz+9sQTssasb82Syt1OqYiTCQxFilXcp6edmLB4UMBaYpi/euYmhUWFX1jB/kt97FPVaIPlNrjk//TMjKxpTkuQJ+O8Vwp7bjyxvrRVgs0WDudtX6FuigYQQKTcMU/EVzTepCWvcsjbMhRoZYmtXd7tSbM74uKDl9bTJhfiURlyaIYmNd6naIOG2vdWyu7WNDgHayN3BaV5458pVCG09cHnF0kfVXrJTdn5QPeKwIDAQAB\n测试 Android\nlx_music_mobile",
+    "initialHeader": "RsSM0+H2u48BELy00hemW1JBr+9qchYkeY9E75z54gz3vjIcTY5weL84q5ziLxSHnbXSgu6nY+psN/1Bp6tgFb3a1UnRqFNbvl1PdRFh8l4Lrrw3tutEvjm/Pk1n9PgMQlJAsaAoOWRgiq7rY8OBuh9eWvZGQ0Mc2urWAg3n6HsvCdScHprxAvV+PHZt//aKMaVExhbrsqtY+p2MJoMmBzWX4lgO2rIIFOdcatwKmS0Lb4eO2QTxMHLVkbWhag6rFEv0JYmozfme+CyOlOAVpfVZN9oiF6cSe42OSGss7bsYYQ0AUlpkWLrzN4jfCz65Syxc2PWNS00s5n9UdYdkeImZJ95aRzR70RNg0qI78Bhox54Za6RmNSOT+HY8UAiOe9YDhrDQ+FU0/reQZg6vLSJK/vQd5Z6DNRWjee0JD2nR/9py4A+J4yiAU8A45v7LwxjfEb5mY2lLbL4WXXh5Hcl9/SsRoi/H6Vtpo2ziMCE9RSt76+cXOL6zpaeN66cqN3MxBjWvjish0oDVnaI+xwv9K96ReEY1S92u0no2eyG680i3cY45uq6tCDzrfMiegduEDlT4seXayyLbHvhTzA==",
+    "rsaCiphertext": "uTfdNzrKqy1DJB2uLXvl8m2s/Nfj2JBxI83v/79kRgAW6yvH//x9ksCG+GxeBv+G/wQHchu8Z4tjeMWUtbNNtnkahc68ACXaIpTu1KoCrThvLzQD+hR2CDdgJXycn7kDVT/HT31plufw0cltOHF6mBbhvqu3FZiEDKNHCAoumX1m6IYAMocgdIAAqEmRXtR8kcb6f1Y8smo+5ci23KDZYAo2p4SOlzh7g7sH0HQewUTnFZwvivZpndD5thy+yFN45sdMx6u5fVLj2Y5PRJwg2wFr9eYgZ5XnNPI3dnrLyE34sotN6pcFttT9Eo4fOTpg6OD5JVWxKKjFQaZwU+Y4zw==",
+    "decoded": {
+      "clientId": "fixture-client",
+      "key": "MDEyMzQ1Njc4OWFiY2RlZg==",
+      "serverName": "测试 LX"
+    }
+  },
+  "aes": [
+    {
+      "text": "",
+      "key": "MDEyMzQ1Njc4OWFiY2RlZg==",
+      "ciphertext": "N3Ii4GGpJMWRzZwn6hY+1A=="
+    },
+    {
+      "text": "1234567890123456",
+      "key": "MDEyMzQ1Njc4OWFiY2RlZg==",
+      "ciphertext": "vTtMjDmTF7r/VhNYUsEobDdyIuBhqSTFkc2cJ+oWPtQ="
+    },
+    {
+      "text": "中文与 emoji 🎵",
+      "key": "MDEyMzQ1Njc4OWFiY2RlZg==",
+      "ciphertext": "jgmsRlYmZBatwf06hAI0g6UR9yzdXKZrb5+H155iDGM="
+    },
+    {
+      "text": "lx-music connect",
+      "key": "MDEyMzQ1Njc4OWFiY2RlZg==",
+      "ciphertext": "Of1yC2cmAxZBRV+71+iqQDdyIuBhqSTFkc2cJ+oWPtQ="
+    }
+  ],
+  "frames": [
+    {
+      "text": "{\"name\":\"fixture\",\"path\":[\"echo\"],\"data\":[]}",
+      "frame": "{\"name\":\"fixture\",\"path\":[\"echo\"],\"data\":[]}",
+      "compressed": false
+    },
+    {
+      "text": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "frame": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "compressed": false
+    },
+    {
+      "text": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "frame": "cg_H4sIAAAAAAAAA0tMHAWjYBSMWAAA/OB2WgEEAAA=",
+      "compressed": true
+    },
+    {
+      "text": "🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵",
+      "frame": "🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵",
+      "compressed": false
+    },
+    {
+      "text": "🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵",
+      "frame": "cg_H4sIAAAAAAAAA/swv2/rh1E8ikfxKB7Fo3gUjzgMANewt5gECAAA",
+      "compressed": true
+    },
+    {
+      "text": "中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文中文",
+      "frame": "cg_H4sIAAAAAAAAA+3EQREAAAQAsPgaaOEvkJNDENtj07UZY9u2bdu2bdtvPoUik3wYFQAA",
+      "compressed": true
+    }
+  ],
+  "jsonCases": [
+    {
+      "name": "indices-and-unicode",
+      "input": "{\"10\":\"ten\",\"2\":\"two\",\"01\":\"not-index\",\"4294967295\":\"not-index\",\"u\":\"\\ud800\",\"text\":\"音乐🎵\\n\\u0000\\u2028\\u2029\"}",
+      "canonical": "{\"2\":\"two\",\"10\":\"ten\",\"01\":\"not-index\",\"4294967295\":\"not-index\",\"u\":\"\\ud800\",\"text\":\"音乐🎵\\n\\u0000  \"}",
+      "md5": "250d9011440cca7190b06f13040e2281"
+    },
+    {
+      "name": "number-boundaries",
+      "input": "[-0,1.0,1e-6,1e-7,1e20,1e21,1e23,1000000000000000128,9007199254740993,2.2250738585072014e-308,5e-324,1.7976931348623157e308,1e400]",
+      "canonical": "[0,1,0.000001,1e-7,100000000000000000000,1e+21,1e+23,1000000000000000100,9007199254740992,2.2250738585072014e-308,5e-324,1.7976931348623157e+308,null]",
+      "md5": "a930bdf870ede65572d60e103c555f89"
+    },
+    {
+      "name": "deterministic-ieee754-corpus",
+      "input": "[1.8386394517257991e-92,-9.0849382911679412e+48,-1.7257423766123035e-279,-2.6778909169587644e+164,-2.8329112608540190e+29,3.4042836772724970e-288,-5.3938598489279627e+266,-2.6110406285545832e+117,1.5491978866063121e-250,2.3560094091984846e-241,-4.8976830634895363e+173,-4.7277297189700443e-37,7.8404678928411302e+260,5.0742741425506975e-35,3.8474773167913083e+304,4.8547339579194501e-16,2.5110431046370852e-216,1.8136979596815955e+132,196241.89847497747,5.2664852351984844e+219,1.8897079234047594e-57,2.6869706031560697e-122,-1.5575296383648180e-256,7.2319881056703685e-301,-3.0800133924936872e+81,2.6783350623001509e+219,-6.0559483865973897e+270,1.4049175069260101e+28,1.1212363979697040e+47,2.8721867915380271e+275,1.1748928734599450e-74,6.8090177823123991e-32,-2.6951584530501629e-244,3.5881060102718070e+78,-3.2761370805218615e+89,-4.4125760762301839e-263,-1348.6596039712763,-6.2275012200738618e+22,2.2879544639715102e-99,2.0435605821657462e+236,-2.4403258442327878e-151,2.8624758428302001e+300,3.4016817084376002e+249,-6.2521239217970306e+307,-2.2251498974838465e+204,-1.8146267714857468e-49,4.7331025152231682e+95,-2.6531015576819449e-191,1.8265324877553238e+72,7.9612714971043029e-17,-6.7434774644452999e-274,-23368.057942107098,8.2306160199226924e+251,5.8148084445316665e+117,-7750.2656913284954,-9.6663028017914785e-299,-2.5664533534510914e-222,-1.4581028742690580e+80,1.6536507233274227e-235,-2.8443056628646549e-146,-4.5965703101435727e+272,5.7204583824706799e-282,1.0320127980875700e+147,1.0885166434228000e+44,-1.0239200177046957e-280,4.3616950024491665e-277,2.8856365884030948e-254,2.9511890047946060e+292,-1.5064700675761495e-131,5.9244236195998332e+100,1.7622361996513721e-243,-5.1469195118604521e+263,8.1523242591331446e-190,-4.7898562655931915e+218,-1.9070508530748979e+85,-2.8001458714606365e+150,2.1939631865507532e-53,2.2818686551778714e-116,-1.4412503330651879e-57,4.0707072725879740e-82,-1.2243696590553058e-158,-7.2364761007302234e-298,-2.7303624690951605e-36,1.0336193172874115e+33,-1.7401603205037184e+211,3.5886380677678635e-14,-2.1437855734858991e-291,9.3452548717429308e-211,-1.7372411760900763e-150,-1.1051933394196035e+77,2.2219028918759064e+163,4.1840823308616475e-248,-6.4057667809515387e-79,5.0224048914076138e-116,6.8567273399977092e-7,-7.0512188987223893e+243,5.3924275286655771e-307,3.1053039891214561e+105,-3.0037731026620494e+200,4.9878202516328131e+231,2.3408080257934636e-70,-1.1620520787296101e+283,-5.6373733703860517e-211,3.8522656161464509e-80,1.2168785089910635e-22,-4.1253440341385960e+91,3.1540889539606024e-130,1.3050685067111134e-125,1.0252673529913689e+126,-5.4847453714829573e-215,8.5611114595896164e+72,1.4664163770592162e-80,-1.7714580598897134e-209,1.4786584862256407e-23,-5.0757175174760467e-137,-8.7423101940259337e+204,1.6598375842241597e-243,-3.6293622283026933e-307,-1.0100348973311504e-157,1.1739654533865440e+288,-4.0284844533174708e-192,-5.1269990779389647e+303,6.9342774485323427e-54,-3.7208861802487706e+242,1.7279660905674928e+98,-1.1081046355252594e+74,2.4286764593178516e-193,-8.2375509826055679e-230,-9.4452878084643429e+123,6.3356448074382048e+30,-5.4648243884572624e-182,3.9251776124356275e+102,3.4921288616076031e-246,3.9924391300903795e+114,-0.00054328411858418305,-2.7714727246857519e-292,-1.9544391530015705e+45,-1.5129104148530037e-209,-1.2794056599946281e-31,1.0613755120711156e-151,-2.0311944715963894e+76,-3.5269734316308346e+273,-7.1090776859541084e+181,3.9361279434044495e-23,3.7285161422462051e-44,-8.3173772941698864e+140,-4.8263922808447314e+91,-5.0085831072764870e+267,-1.9612781807313799e+129,-1.5787448594431031e+22,-9.4166715636208516e+280,-3.6364158094010754e+276,1.9871906124778693e+76,-3.7406850117083165e-104,-8.6674806078723208e+28,4.2151563978415232e+192,1.6633044731866805e-220,-2.4223988522842361e+173,3.6902404942435863e+81,6.8132309178751944e-194]",
+      "canonical": "[1.838639451725799e-92,-9.084938291167941e+48,-1.7257423766123035e-279,-2.6778909169587644e+164,-2.832911260854019e+29,3.404283677272497e-288,-5.393859848927963e+266,-2.611040628554583e+117,1.549197886606312e-250,2.3560094091984846e-241,-4.8976830634895363e+173,-4.727729718970044e-37,7.84046789284113e+260,5.074274142550697e-35,3.8474773167913083e+304,4.85473395791945e-16,2.5110431046370852e-216,1.8136979596815955e+132,196241.89847497747,5.2664852351984844e+219,1.8897079234047594e-57,2.6869706031560697e-122,-1.557529638364818e-256,7.2319881056703685e-301,-3.0800133924936872e+81,2.678335062300151e+219,-6.05594838659739e+270,1.40491750692601e+28,1.121236397969704e+47,2.872186791538027e+275,1.174892873459945e-74,6.809017782312399e-32,-2.695158453050163e-244,3.588106010271807e+78,-3.2761370805218615e+89,-4.412576076230184e-263,-1348.6596039712763,-6.227501220073862e+22,2.2879544639715102e-99,2.0435605821657462e+236,-2.440325844232788e-151,2.8624758428302e+300,3.4016817084376002e+249,-6.252123921797031e+307,-2.2251498974838465e+204,-1.814626771485747e-49,4.733102515223168e+95,-2.653101557681945e-191,1.8265324877553238e+72,7.961271497104303e-17,-6.7434774644453e-274,-23368.057942107098,8.230616019922692e+251,5.814808444531666e+117,-7750.265691328495,-9.666302801791479e-299,-2.5664533534510914e-222,-1.458102874269058e+80,1.6536507233274227e-235,-2.844305662864655e-146,-4.5965703101435727e+272,5.72045838247068e-282,1.03201279808757e+147,1.0885166434228e+44,-1.0239200177046957e-280,4.3616950024491665e-277,2.8856365884030948e-254,2.951189004794606e+292,-1.5064700675761495e-131,5.924423619599833e+100,1.762236199651372e-243,-5.146919511860452e+263,8.152324259133145e-190,-4.7898562655931915e+218,-1.907050853074898e+85,-2.8001458714606365e+150,2.193963186550753e-53,2.2818686551778714e-116,-1.441250333065188e-57,4.070707272587974e-82,-1.2243696590553058e-158,-7.236476100730223e-298,-2.7303624690951605e-36,1.0336193172874115e+33,-1.7401603205037184e+211,3.5886380677678635e-14,-2.143785573485899e-291,9.34525487174293e-211,-1.7372411760900763e-150,-1.1051933394196035e+77,2.2219028918759064e+163,4.1840823308616475e-248,-6.405766780951539e-79,5.022404891407614e-116,6.856727339997709e-7,-7.05121889872239e+243,5.392427528665577e-307,3.105303989121456e+105,-3.0037731026620494e+200,4.987820251632813e+231,2.3408080257934636e-70,-1.16205207872961e+283,-5.637373370386052e-211,3.852265616146451e-80,1.2168785089910635e-22,-4.125344034138596e+91,3.1540889539606024e-130,1.3050685067111134e-125,1.0252673529913689e+126,-5.484745371482957e-215,8.561111459589616e+72,1.4664163770592162e-80,-1.7714580598897134e-209,1.4786584862256407e-23,-5.075717517476047e-137,-8.742310194025934e+204,1.6598375842241597e-243,-3.629362228302693e-307,-1.0100348973311504e-157,1.173965453386544e+288,-4.028484453317471e-192,-5.1269990779389647e+303,6.934277448532343e-54,-3.7208861802487706e+242,1.7279660905674928e+98,-1.1081046355252594e+74,2.4286764593178516e-193,-8.237550982605568e-230,-9.445287808464343e+123,6.335644807438205e+30,-5.4648243884572624e-182,3.9251776124356275e+102,3.492128861607603e-246,3.9924391300903795e+114,-0.000543284118584183,-2.771472724685752e-292,-1.9544391530015705e+45,-1.5129104148530037e-209,-1.279405659994628e-31,1.0613755120711156e-151,-2.0311944715963894e+76,-3.5269734316308346e+273,-7.109077685954108e+181,3.9361279434044495e-23,3.728516142246205e-44,-8.317377294169886e+140,-4.8263922808447314e+91,-5.008583107276487e+267,-1.96127818073138e+129,-1.5787448594431031e+22,-9.416671563620852e+280,-3.6364158094010754e+276,1.9871906124778693e+76,-3.7406850117083165e-104,-8.66748060787232e+28,4.215156397841523e+192,1.6633044731866805e-220,-2.422398852284236e+173,3.6902404942435863e+81,6.813230917875194e-194]",
+      "md5": "256ea076538ad714d6bb6d8ee52d4734"
+    },
+    {
+      "name": "snapshot",
+      "input": "{\"defaultList\":[{\"id\":\"1\",\"name\":\"client-one\",\"singer\":\"歌手\",\"source\":\"kw\",\"interval\":null,\"meta\":{\"songId\":\"1\",\"albumName\":\"专辑\",\"qualitys\":[],\"_qualitys\":{},\"unknown\":{\"2\":\"y\",\"10\":\"x\"}}},{\"id\":\"3\",\"name\":\"client-three\",\"singer\":\"歌手\",\"source\":\"kw\",\"interval\":null,\"meta\":{\"songId\":\"3\",\"albumName\":\"专辑\",\"qualitys\":[],\"_qualitys\":{},\"unknown\":{\"2\":\"y\",\"10\":\"x\"}}}],\"loveList\":[],\"userList\":[{\"id\":\"same\",\"name\":\"client\",\"locationUpdateTime\":20,\"list\":[{\"id\":\"3\",\"name\":\"client-three\",\"singer\":\"歌手\",\"source\":\"kw\",\"interval\":null,\"meta\":{\"songId\":\"3\",\"albumName\":\"专辑\",\"qualitys\":[],\"_qualitys\":{},\"unknown\":{\"2\":\"y\",\"10\":\"x\"}}}]},{\"id\":\"client-only\",\"name\":\"client-only\",\"locationUpdateTime\":null,\"list\":[]}],\"extraField\":{\"keep\":true}}",
+      "canonical": "{\"defaultList\":[{\"id\":\"1\",\"name\":\"client-one\",\"singer\":\"歌手\",\"source\":\"kw\",\"interval\":null,\"meta\":{\"songId\":\"1\",\"albumName\":\"专辑\",\"qualitys\":[],\"_qualitys\":{},\"unknown\":{\"2\":\"y\",\"10\":\"x\"}}},{\"id\":\"3\",\"name\":\"client-three\",\"singer\":\"歌手\",\"source\":\"kw\",\"interval\":null,\"meta\":{\"songId\":\"3\",\"albumName\":\"专辑\",\"qualitys\":[],\"_qualitys\":{},\"unknown\":{\"2\":\"y\",\"10\":\"x\"}}}],\"loveList\":[],\"userList\":[{\"id\":\"same\",\"name\":\"client\",\"locationUpdateTime\":20,\"list\":[{\"id\":\"3\",\"name\":\"client-three\",\"singer\":\"歌手\",\"source\":\"kw\",\"interval\":null,\"meta\":{\"songId\":\"3\",\"albumName\":\"专辑\",\"qualitys\":[],\"_qualitys\":{},\"unknown\":{\"2\":\"y\",\"10\":\"x\"}}}]},{\"id\":\"client-only\",\"name\":\"client-only\",\"locationUpdateTime\":null,\"list\":[]}],\"extraField\":{\"keep\":true}}",
+      "md5": "9849e46f924772ce11eb8845d73c56fa"
+    }
+  ],
+  "rpc": [
+    {
+      "request": {
+        "name": "fixture-echo",
+        "path": [
+          "echo"
+        ],
+        "data": [
+          null,
+          {
+            "unknown": "🎵"
+          }
+        ]
+      },
+      "response": {
+        "name": "fixture-echo",
+        "error": null,
+        "data": [
+          null,
+          {
+            "unknown": "🎵"
+          }
+        ]
+      }
+    },
+    {
+      "request": {
+        "name": "fixture-empty",
+        "path": [
+          "empty"
+        ],
+        "data": []
+      },
+      "response": {
+        "name": "fixture-empty",
+        "error": null
+      }
+    },
+    {
+      "request": {
+        "name": "fixture-fail",
+        "path": [
+          "fail"
+        ],
+        "data": []
+      },
+      "response": {
+        "name": "fixture-fail",
+        "error": "fixture rejection"
+      }
+    },
+    {
+      "request": {
+        "name": "fixture-literal",
+        "path": [
+          "literal:name"
+        ],
+        "data": [
+          7
+        ]
+      },
+      "response": {
+        "name": "fixture-literal",
+        "error": null,
+        "data": 7
+      }
+    }
+  ],
+  "syncCases": [
+    {
+      "name": "merge_local_remote",
+      "input": {
+        "server": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "server-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "2",
+              "name": "server-two",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "2",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "server",
+              "locationUpdateTime": 10,
+              "list": [
+                {
+                  "id": "1",
+                  "name": "server-one",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "1",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "server-only",
+              "name": "server-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "client": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "client-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "3",
+              "name": "client-three",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "3",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "client",
+              "locationUpdateTime": 20,
+              "list": [
+                {
+                  "id": "3",
+                  "name": "client-three",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "3",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "client-only",
+              "name": "client-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "mode": "merge_local_remote"
+      },
+      "result": {
+        "server": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "client-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "3",
+              "name": "client-three",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "3",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "2",
+              "name": "server-two",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "2",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "client",
+              "locationUpdateTime": 10,
+              "list": [
+                {
+                  "id": "3",
+                  "name": "client-three",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "3",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                },
+                {
+                  "id": "1",
+                  "name": "server-one",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "1",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "client-only",
+              "name": "client-only",
+              "locationUpdateTime": null,
+              "list": []
+            },
+            {
+              "id": "server-only",
+              "name": "server-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "client": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "client-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "3",
+              "name": "client-three",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "3",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "2",
+              "name": "server-two",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "2",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "client",
+              "locationUpdateTime": 10,
+              "list": [
+                {
+                  "id": "3",
+                  "name": "client-three",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "3",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                },
+                {
+                  "id": "1",
+                  "name": "server-one",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "1",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "client-only",
+              "name": "client-only",
+              "locationUpdateTime": null,
+              "list": []
+            },
+            {
+              "id": "server-only",
+              "name": "server-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "ready": true,
+        "error": null,
+        "calls": [
+          "getEnabledFeatures",
+          "get_list",
+          "choose_mode",
+          "get_list",
+          "set_list",
+          "list_finished",
+          "finished"
+        ]
+      }
+    },
+    {
+      "name": "merge_remote_local",
+      "input": {
+        "server": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "server-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "2",
+              "name": "server-two",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "2",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "server",
+              "locationUpdateTime": 10,
+              "list": [
+                {
+                  "id": "1",
+                  "name": "server-one",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "1",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "server-only",
+              "name": "server-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "client": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "client-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "3",
+              "name": "client-three",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "3",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "client",
+              "locationUpdateTime": 20,
+              "list": [
+                {
+                  "id": "3",
+                  "name": "client-three",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "3",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "client-only",
+              "name": "client-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "mode": "merge_remote_local"
+      },
+      "result": {
+        "server": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "server-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "2",
+              "name": "server-two",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "2",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "3",
+              "name": "client-three",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "3",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "server",
+              "locationUpdateTime": 10,
+              "list": [
+                {
+                  "id": "1",
+                  "name": "server-one",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "1",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                },
+                {
+                  "id": "3",
+                  "name": "client-three",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "3",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "server-only",
+              "name": "server-only",
+              "locationUpdateTime": null,
+              "list": []
+            },
+            {
+              "id": "client-only",
+              "name": "client-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "client": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "server-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "2",
+              "name": "server-two",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "2",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "3",
+              "name": "client-three",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "3",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "server",
+              "locationUpdateTime": 10,
+              "list": [
+                {
+                  "id": "1",
+                  "name": "server-one",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "1",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                },
+                {
+                  "id": "3",
+                  "name": "client-three",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "3",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "server-only",
+              "name": "server-only",
+              "locationUpdateTime": null,
+              "list": []
+            },
+            {
+              "id": "client-only",
+              "name": "client-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "ready": true,
+        "error": null,
+        "calls": [
+          "getEnabledFeatures",
+          "get_list",
+          "choose_mode",
+          "get_list",
+          "set_list",
+          "list_finished",
+          "finished"
+        ]
+      }
+    },
+    {
+      "name": "overwrite_local_remote",
+      "input": {
+        "server": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "server-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "2",
+              "name": "server-two",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "2",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "server",
+              "locationUpdateTime": 10,
+              "list": [
+                {
+                  "id": "1",
+                  "name": "server-one",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "1",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "server-only",
+              "name": "server-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "client": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "client-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "3",
+              "name": "client-three",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "3",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "client",
+              "locationUpdateTime": 20,
+              "list": [
+                {
+                  "id": "3",
+                  "name": "client-three",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "3",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "client-only",
+              "name": "client-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "mode": "overwrite_local_remote"
+      },
+      "result": {
+        "server": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "client-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "3",
+              "name": "client-three",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "3",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "client",
+              "locationUpdateTime": 20,
+              "list": [
+                {
+                  "id": "3",
+                  "name": "client-three",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "3",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "client-only",
+              "name": "client-only",
+              "locationUpdateTime": null,
+              "list": []
+            },
+            {
+              "id": "server-only",
+              "name": "server-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "client": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "client-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "3",
+              "name": "client-three",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "3",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "client",
+              "locationUpdateTime": 20,
+              "list": [
+                {
+                  "id": "3",
+                  "name": "client-three",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "3",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "client-only",
+              "name": "client-only",
+              "locationUpdateTime": null,
+              "list": []
+            },
+            {
+              "id": "server-only",
+              "name": "server-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "ready": true,
+        "error": null,
+        "calls": [
+          "getEnabledFeatures",
+          "get_list",
+          "choose_mode",
+          "get_list",
+          "set_list",
+          "list_finished",
+          "finished"
+        ]
+      }
+    },
+    {
+      "name": "overwrite_remote_local",
+      "input": {
+        "server": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "server-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "2",
+              "name": "server-two",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "2",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "server",
+              "locationUpdateTime": 10,
+              "list": [
+                {
+                  "id": "1",
+                  "name": "server-one",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "1",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "server-only",
+              "name": "server-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "client": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "client-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "3",
+              "name": "client-three",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "3",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "client",
+              "locationUpdateTime": 20,
+              "list": [
+                {
+                  "id": "3",
+                  "name": "client-three",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "3",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "client-only",
+              "name": "client-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "mode": "overwrite_remote_local"
+      },
+      "result": {
+        "server": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "server-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "2",
+              "name": "server-two",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "2",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "server",
+              "locationUpdateTime": 10,
+              "list": [
+                {
+                  "id": "1",
+                  "name": "server-one",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "1",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "server-only",
+              "name": "server-only",
+              "locationUpdateTime": null,
+              "list": []
+            },
+            {
+              "id": "client-only",
+              "name": "client-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "client": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "server-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "2",
+              "name": "server-two",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "2",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "server",
+              "locationUpdateTime": 10,
+              "list": [
+                {
+                  "id": "1",
+                  "name": "server-one",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "1",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "server-only",
+              "name": "server-only",
+              "locationUpdateTime": null,
+              "list": []
+            },
+            {
+              "id": "client-only",
+              "name": "client-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "ready": true,
+        "error": null,
+        "calls": [
+          "getEnabledFeatures",
+          "get_list",
+          "choose_mode",
+          "get_list",
+          "set_list",
+          "list_finished",
+          "finished"
+        ]
+      }
+    },
+    {
+      "name": "overwrite_local_remote_full",
+      "input": {
+        "server": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "server-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "2",
+              "name": "server-two",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "2",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "server",
+              "locationUpdateTime": 10,
+              "list": [
+                {
+                  "id": "1",
+                  "name": "server-one",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "1",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "server-only",
+              "name": "server-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "client": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "client-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "3",
+              "name": "client-three",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "3",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "client",
+              "locationUpdateTime": 20,
+              "list": [
+                {
+                  "id": "3",
+                  "name": "client-three",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "3",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "client-only",
+              "name": "client-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "mode": "overwrite_local_remote_full"
+      },
+      "result": {
+        "server": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "client-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "3",
+              "name": "client-three",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "3",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "client",
+              "locationUpdateTime": 20,
+              "list": [
+                {
+                  "id": "3",
+                  "name": "client-three",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "3",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "client-only",
+              "name": "client-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "client": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "client-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "3",
+              "name": "client-three",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "3",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "client",
+              "locationUpdateTime": 20,
+              "list": [
+                {
+                  "id": "3",
+                  "name": "client-three",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "3",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "client-only",
+              "name": "client-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "ready": true,
+        "error": null,
+        "calls": [
+          "getEnabledFeatures",
+          "get_list",
+          "choose_mode",
+          "get_list",
+          "list_finished",
+          "finished"
+        ]
+      }
+    },
+    {
+      "name": "overwrite_remote_local_full",
+      "input": {
+        "server": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "server-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "2",
+              "name": "server-two",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "2",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "server",
+              "locationUpdateTime": 10,
+              "list": [
+                {
+                  "id": "1",
+                  "name": "server-one",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "1",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "server-only",
+              "name": "server-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "client": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "client-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "3",
+              "name": "client-three",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "3",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "client",
+              "locationUpdateTime": 20,
+              "list": [
+                {
+                  "id": "3",
+                  "name": "client-three",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "3",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "client-only",
+              "name": "client-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "mode": "overwrite_remote_local_full"
+      },
+      "result": {
+        "server": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "server-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "2",
+              "name": "server-two",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "2",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "server",
+              "locationUpdateTime": 10,
+              "list": [
+                {
+                  "id": "1",
+                  "name": "server-one",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "1",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "server-only",
+              "name": "server-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "client": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "server-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "2",
+              "name": "server-two",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "2",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "server",
+              "locationUpdateTime": 10,
+              "list": [
+                {
+                  "id": "1",
+                  "name": "server-one",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "1",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "server-only",
+              "name": "server-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "ready": true,
+        "error": null,
+        "calls": [
+          "getEnabledFeatures",
+          "get_list",
+          "choose_mode",
+          "get_list",
+          "set_list",
+          "list_finished",
+          "finished"
+        ]
+      }
+    },
+    {
+      "name": "cancel",
+      "input": {
+        "server": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "server-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "2",
+              "name": "server-two",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "2",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "server",
+              "locationUpdateTime": 10,
+              "list": [
+                {
+                  "id": "1",
+                  "name": "server-one",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "1",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "server-only",
+              "name": "server-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "client": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "client-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "3",
+              "name": "client-three",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "3",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "client",
+              "locationUpdateTime": 20,
+              "list": [
+                {
+                  "id": "3",
+                  "name": "client-three",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "3",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "client-only",
+              "name": "client-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "mode": "cancel"
+      },
+      "result": {
+        "server": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "server-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "2",
+              "name": "server-two",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "2",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "server",
+              "locationUpdateTime": 10,
+              "list": [
+                {
+                  "id": "1",
+                  "name": "server-one",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "1",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "server-only",
+              "name": "server-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "client": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "client-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "3",
+              "name": "client-three",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "3",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "client",
+              "locationUpdateTime": 20,
+              "list": [
+                {
+                  "id": "3",
+                  "name": "client-three",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "3",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "client-only",
+              "name": "client-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "ready": false,
+        "error": "cancel",
+        "calls": [
+          "getEnabledFeatures",
+          "get_list",
+          "choose_mode",
+          "finished"
+        ]
+      }
+    },
+    {
+      "name": "empty-client",
+      "input": {
+        "server": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "server-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "2",
+              "name": "server-two",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "2",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "server",
+              "locationUpdateTime": 10,
+              "list": [
+                {
+                  "id": "1",
+                  "name": "server-one",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "1",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "server-only",
+              "name": "server-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "client": {
+          "defaultList": [],
+          "loveList": [],
+          "userList": []
+        },
+        "mode": "cancel"
+      },
+      "result": {
+        "server": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "server-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "2",
+              "name": "server-two",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "2",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "server",
+              "locationUpdateTime": 10,
+              "list": [
+                {
+                  "id": "1",
+                  "name": "server-one",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "1",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "server-only",
+              "name": "server-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "client": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "server-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "2",
+              "name": "server-two",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "2",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "server",
+              "locationUpdateTime": 10,
+              "list": [
+                {
+                  "id": "1",
+                  "name": "server-one",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "1",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "server-only",
+              "name": "server-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "ready": true,
+        "error": null,
+        "calls": [
+          "getEnabledFeatures",
+          "get_list",
+          "set_list",
+          "list_finished",
+          "finished"
+        ]
+      }
+    },
+    {
+      "name": "empty-server",
+      "input": {
+        "server": {
+          "defaultList": [],
+          "loveList": [],
+          "userList": []
+        },
+        "client": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "client-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "3",
+              "name": "client-three",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "3",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "client",
+              "locationUpdateTime": 20,
+              "list": [
+                {
+                  "id": "3",
+                  "name": "client-three",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "3",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "client-only",
+              "name": "client-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "mode": "cancel"
+      },
+      "result": {
+        "server": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "client-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "3",
+              "name": "client-three",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "3",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "client",
+              "locationUpdateTime": 20,
+              "list": [
+                {
+                  "id": "3",
+                  "name": "client-three",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "3",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "client-only",
+              "name": "client-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "client": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "client-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "3",
+              "name": "client-three",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "3",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "client",
+              "locationUpdateTime": 20,
+              "list": [
+                {
+                  "id": "3",
+                  "name": "client-three",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "3",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "client-only",
+              "name": "client-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "ready": true,
+        "error": null,
+        "calls": [
+          "getEnabledFeatures",
+          "get_list",
+          "list_finished",
+          "finished"
+        ]
+      }
+    },
+    {
+      "name": "three-way-deletions",
+      "input": {
+        "server": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "4",
+              "name": "server-new",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "4",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": []
+        },
+        "client": {
+          "defaultList": [
+            {
+              "id": "2",
+              "name": "two",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "2",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "5",
+              "name": "client-new",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "5",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": []
+        },
+        "snapshot": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "2",
+              "name": "two",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "2",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": []
+        },
+        "mode": "cancel"
+      },
+      "result": {
+        "server": {
+          "defaultList": [
+            {
+              "id": "4",
+              "name": "server-new",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "4",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "5",
+              "name": "client-new",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "5",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": []
+        },
+        "client": {
+          "defaultList": [
+            {
+              "id": "4",
+              "name": "server-new",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "4",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "5",
+              "name": "client-new",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "5",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": []
+        },
+        "ready": true,
+        "error": null,
+        "calls": [
+          "getEnabledFeatures",
+          "get_list",
+          "set_list",
+          "list_finished",
+          "finished"
+        ]
+      }
+    },
+    {
+      "name": "already-current",
+      "input": {
+        "server": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "server-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "2",
+              "name": "server-two",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "2",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "server",
+              "locationUpdateTime": 10,
+              "list": [
+                {
+                  "id": "1",
+                  "name": "server-one",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "1",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "server-only",
+              "name": "server-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "client": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "server-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "2",
+              "name": "server-two",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "2",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "server",
+              "locationUpdateTime": 10,
+              "list": [
+                {
+                  "id": "1",
+                  "name": "server-one",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "1",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "server-only",
+              "name": "server-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "snapshot": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "server-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "2",
+              "name": "server-two",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "2",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "server",
+              "locationUpdateTime": 10,
+              "list": [
+                {
+                  "id": "1",
+                  "name": "server-one",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "1",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "server-only",
+              "name": "server-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "mode": "cancel"
+      },
+      "result": {
+        "server": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "server-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "2",
+              "name": "server-two",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "2",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "server",
+              "locationUpdateTime": 10,
+              "list": [
+                {
+                  "id": "1",
+                  "name": "server-one",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "1",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "server-only",
+              "name": "server-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "client": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "server-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "2",
+              "name": "server-two",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "2",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "server",
+              "locationUpdateTime": 10,
+              "list": [
+                {
+                  "id": "1",
+                  "name": "server-one",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "1",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "server-only",
+              "name": "server-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "ready": true,
+        "error": null,
+        "calls": [
+          "getEnabledFeatures",
+          "list_finished",
+          "finished"
+        ]
+      }
+    },
+    {
+      "name": "response-failure",
+      "input": {
+        "server": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "server-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "2",
+              "name": "server-two",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "2",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "server",
+              "locationUpdateTime": 10,
+              "list": [
+                {
+                  "id": "1",
+                  "name": "server-one",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "1",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "server-only",
+              "name": "server-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "client": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "client-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "3",
+              "name": "client-three",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "3",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "client",
+              "locationUpdateTime": 20,
+              "list": [
+                {
+                  "id": "3",
+                  "name": "client-three",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "3",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "client-only",
+              "name": "client-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "mode": "merge_local_remote",
+        "failSet": true
+      },
+      "result": {
+        "server": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "client-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "3",
+              "name": "client-three",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "3",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "2",
+              "name": "server-two",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "2",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "client",
+              "locationUpdateTime": 10,
+              "list": [
+                {
+                  "id": "3",
+                  "name": "client-three",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "3",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                },
+                {
+                  "id": "1",
+                  "name": "server-one",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "1",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "client-only",
+              "name": "client-only",
+              "locationUpdateTime": null,
+              "list": []
+            },
+            {
+              "id": "server-only",
+              "name": "server-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "client": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "client-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "3",
+              "name": "client-three",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "3",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "client",
+              "locationUpdateTime": 20,
+              "list": [
+                {
+                  "id": "3",
+                  "name": "client-three",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "3",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "client-only",
+              "name": "client-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "ready": false,
+        "error": "fixture disconnected",
+        "calls": [
+          "getEnabledFeatures",
+          "get_list",
+          "choose_mode",
+          "get_list",
+          "set_list",
+          "finished"
+        ]
+      }
+    },
+    {
+      "name": "reconnect-reconcile",
+      "input": {
+        "server": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "client-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "3",
+              "name": "client-three",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "3",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "2",
+              "name": "server-two",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "2",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "client",
+              "locationUpdateTime": 10,
+              "list": [
+                {
+                  "id": "3",
+                  "name": "client-three",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "3",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                },
+                {
+                  "id": "1",
+                  "name": "server-one",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "1",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "client-only",
+              "name": "client-only",
+              "locationUpdateTime": null,
+              "list": []
+            },
+            {
+              "id": "server-only",
+              "name": "server-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "client": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "client-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "3",
+              "name": "client-three",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "3",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "client",
+              "locationUpdateTime": 20,
+              "list": [
+                {
+                  "id": "3",
+                  "name": "client-three",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "3",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "client-only",
+              "name": "client-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "mode": "merge_local_remote"
+      },
+      "result": {
+        "server": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "client-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "3",
+              "name": "client-three",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "3",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "2",
+              "name": "server-two",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "2",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "client",
+              "locationUpdateTime": 10,
+              "list": [
+                {
+                  "id": "3",
+                  "name": "client-three",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "3",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                },
+                {
+                  "id": "1",
+                  "name": "server-one",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "1",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "client-only",
+              "name": "client-only",
+              "locationUpdateTime": null,
+              "list": []
+            },
+            {
+              "id": "server-only",
+              "name": "server-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "client": {
+          "defaultList": [
+            {
+              "id": "1",
+              "name": "client-one",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "1",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "3",
+              "name": "client-three",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "3",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            },
+            {
+              "id": "2",
+              "name": "server-two",
+              "singer": "歌手",
+              "source": "kw",
+              "interval": null,
+              "meta": {
+                "songId": "2",
+                "albumName": "专辑",
+                "qualitys": [],
+                "_qualitys": {},
+                "unknown": {
+                  "2": "y",
+                  "10": "x"
+                }
+              }
+            }
+          ],
+          "loveList": [],
+          "userList": [
+            {
+              "id": "same",
+              "name": "client",
+              "locationUpdateTime": 10,
+              "list": [
+                {
+                  "id": "3",
+                  "name": "client-three",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "3",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                },
+                {
+                  "id": "1",
+                  "name": "server-one",
+                  "singer": "歌手",
+                  "source": "kw",
+                  "interval": null,
+                  "meta": {
+                    "songId": "1",
+                    "albumName": "专辑",
+                    "qualitys": [],
+                    "_qualitys": {},
+                    "unknown": {
+                      "2": "y",
+                      "10": "x"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "client-only",
+              "name": "client-only",
+              "locationUpdateTime": null,
+              "list": []
+            },
+            {
+              "id": "server-only",
+              "name": "server-only",
+              "locationUpdateTime": null,
+              "list": []
+            }
+          ]
+        },
+        "ready": true,
+        "error": null,
+        "calls": [
+          "getEnabledFeatures",
+          "get_list",
+          "choose_mode",
+          "get_list",
+          "set_list",
+          "list_finished",
+          "finished"
+        ]
+      }
+    }
+  ],
+  "modes": {
+    "merge_local_remote": "merge_remote_local",
+    "merge_remote_local": "merge_local_remote",
+    "overwrite_local_remote": "overwrite_remote_local",
+    "overwrite_remote_local": "overwrite_local_remote",
+    "overwrite_local_remote_full": "overwrite_remote_local_full",
+    "overwrite_remote_local_full": "overwrite_local_remote_full",
+    "cancel": "cancel"
+  }
+}

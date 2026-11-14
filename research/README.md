@@ -27,6 +27,7 @@
 | [04-auth-and-account-ux.md](04-auth-and-account-ux.md) | 开源及商业账号流程、建议页面、切换与失败恢复 |
 | [05-git-pr-ci-release.md](05-git-pr-ci-release.md) | 分支、PR、Actions、签名、版本号与发布恢复 |
 | [06-decisions-and-validation.md](06-decisions-and-validation.md) | 决策状态、未决问题、架构验证门槛、后续计划输入 |
+| [08-lx-published-artifact.md](08-lx-published-artifact.md) | 实际发布包与 Git tag dist 差异、固定完整性与互操作基准 |
 | [07-unified-auth-options.md](07-unified-auth-options.md) | 连接码兑换统一会话的可行性、权限边界、原版 LX 兼容与取舍 |
 
 ## 证据用语
