@@ -1,6 +1,6 @@
 # 分支、PR、验证与发布基线
 
-2026-11-14，按用户已确认选择修订。当前没有 workflow、密钥、保护规则或发行运行；实施见 [路线图](ROADMAP.md)。
+2026-11-15，按用户最新交付要求修订。已有验证 workflow 和 debug 构建；签名 dev 发行 workflow 尚未启用，不能把本次规则更新称为已经发布。实施见 [路线图](ROADMAP.md)。
 
 ## 3. 开发、PR 与发布
 
@@ -15,6 +15,14 @@ main ──回合并 PR / merge commit──→ dev
 转正窗口冻结候选版本及 dev 合并；稳定发布完成后回合并 main，再更新开发目标。hotfix/* 从 main 开始，经 PR 回 main，随后回合并 dev。回合并保留 merge commit，不能套用普通功能 squash。
 
 main/dev 禁止直接推送和 force push，已发布 tag 不移动。main 不启用阻止 merge commit 的线性历史规则。单维护者由 June 审阅合入，结合必需检查和解决讨论，不设置阻塞本人 PR 的外部批准要求；有独立审阅者后增加。
+
+### 阶段测试版交付（2026-11-15 用户更新）
+
+后续可安装的阶段测试版直接通过 GitHub Release 交付，标记 `prerelease=true`、`latest=false`，附可直接下载安装的 APK、SHA-256 和对应源码提交，不再仅提供会过期的 Actions ZIP。Actions artifacts 继续用于检查报告与内部诊断。
+
+版本格式为 `v<major>.<minor>.<patch>-dev.<N>`，例如 `v0.0.1-dev.1`、`v0.0.1-dev.2`；APK versionName 对应去掉 tag 前缀 `v` 的值。基础版本以 version.properties 为唯一来源；用户此次举例不单独重置现有 0.1.0 基线或降低 versionCode。序号按已占用 tag 递增，源码变化使用新序号，不覆盖旧资产。
+
+用户已授权后续合格的 dev tag 和预发布直接执行，无需每轮再问是否发测试包。阶段 dev 可以早于完整音乐闭环，说明必须如实列出已实现功能与缺口；发布前仍完成对应构建、签名和设备检查，不等待 Pages/feed 接入。dev 尚未建立时，可从已验证且明确记录的阶段提交交付，不为发包自动合并 PR；dev 建立后按合入触发自动发行。稳定发行及远程配置授权不由此扩大。
 
 ### 自动构建与发行
 
@@ -45,7 +53,7 @@ versionCode = ((major × 100 + minor) × 100 + patch) × 1000 + slot
 
 GitHub Pages 使用部署 artifact，不回写 main/dev、不建 feed 源码分支。feed schemaVersion、stable/dev、版本、sourceSha、发布时间、说明和资产哈希/大小/ABI/versionCode 使用显式 DTO。安装前核对包名、较高版本、校验和及证书，再交系统安装器。
 
-编排直接调用发布步骤，不依赖 GITHUB_TOKEN 创建 tag 后触发另一工作流。签名材料、发布环境审批、Pages 和保护由 June 配置；当前文档 PR 不执行远程设置、tag 或发行。
+编排直接调用发布步骤，不依赖 GITHUB_TOKEN 创建 tag 后触发另一工作流。签名材料、发布环境审批、Pages 和保护由 June 配置；后续 dev tag/预发布按上述用户授权执行；本次仅更新约定，没有创建 tag 或 Release。
 
 ## 配置清单
 

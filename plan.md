@@ -6,7 +6,7 @@
 
 - Kotlin、Compose、Hilt；minSdk 33，compileSdk/targetSdk 36。
 - 首先兼容固定版本 LX v4 协议，服务端保持原样。
-- 首个测试版完成搜索、音源、歌单、队列、后台播放、歌词、LX 双向同步和恢复。
+- 首个核心功能测试版完成搜索、音源、歌单、队列、后台播放、歌词、LX 双向同步和恢复；此前阶段 dev 可按最新交付规则预发布。
 - 现有 HTML 是视觉/交互基准，仅补充本机模式、LX 连接和资料切换设计。
 - dev 集成、main 稳定；通过短分支 PR 开发。
 - 包名 cn.lux.music.android；开发/稳定版共用包名、签名和数据，与 mobile 并存。
@@ -69,6 +69,14 @@ main ──回合并 PR / merge commit──→ dev
 转正窗口冻结候选版本及 dev 合并；稳定发布完成后回合并 main，再更新开发目标。hotfix/* 从 main 开始，经 PR 回 main，随后回合并 dev。回合并保留 merge commit，不能套用普通功能 squash。
 
 main/dev 禁止直接推送和 force push，已发布 tag 不移动。main 不启用阻止 merge commit 的线性历史规则。单维护者由 June 审阅合入，结合必需检查和解决讨论，不设置阻塞本人 PR 的外部批准要求；有独立审阅者后增加。
+
+### 阶段测试版交付（2026-11-15 用户更新）
+
+后续可安装的阶段测试版直接通过 GitHub Release 交付，标记 `prerelease=true`、`latest=false`，附可直接下载安装的 APK、SHA-256 和对应源码提交，不再仅提供会过期的 Actions ZIP。Actions artifacts 继续用于检查报告与内部诊断。
+
+版本格式为 `v<major>.<minor>.<patch>-dev.<N>`，例如 `v0.0.1-dev.1`、`v0.0.1-dev.2`；APK versionName 对应去掉 tag 前缀 `v` 的值。基础版本以 version.properties 为唯一来源；用户此次举例不单独重置现有 0.1.0 基线或降低 versionCode。序号按已占用 tag 递增，源码变化使用新序号，不覆盖旧资产。
+
+用户已授权后续合格的 dev tag 和预发布直接执行，无需每轮再问是否发测试包。阶段 dev 可以早于完整音乐闭环，说明必须如实列出已实现功能与缺口；发布前仍完成对应构建、签名和设备检查，不等待 Pages/feed 接入。dev 尚未建立时，可从已验证且明确记录的阶段提交交付，不为发包自动合并 PR；dev 建立后按合入触发自动发行。稳定发行及远程配置授权不由此扩大。
 
 ### 自动构建与发行
 
