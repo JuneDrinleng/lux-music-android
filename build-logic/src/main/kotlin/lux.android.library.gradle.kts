@@ -4,6 +4,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
 }
 configureLuxAndroid(android)
+android { testOptions { targetSdk = 36 } }
 kotlin {
     jvmToolchain(21)
     compilerOptions { jvmTarget.set(JvmTarget.JVM_17) }
