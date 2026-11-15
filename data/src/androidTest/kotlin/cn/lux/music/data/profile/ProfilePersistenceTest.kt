@@ -291,6 +291,7 @@ internal suspend fun seedProfile(
                 endpoint = endpoint,
                 serverId = serverId,
                 bindingId = UUID.randomUUID().toString(),
+                deviceName = "Android fixture",
                 cleartextConfirmed = true,
                 credentials = if (credentials) ProfileVault().encrypt(id, publicCredentials()) else null,
                 syncEnabled = false,

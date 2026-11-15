@@ -48,8 +48,9 @@ internal class LxServerIntegrationTest {
                 store.mutate(store.currentLease(), addSong())
                 store.reconnect()
                 withTimeout(20_000) {
-                    while (store.state.value.failure != ProfileFailure.AUTHORIZATION_REJECTED) delay(50)
+                    while (store.state.value.sync != ProfileSyncState.FAILED) delay(50)
                 }
+                assertEquals(ProfileFailure.AUTHORIZATION_REJECTED, store.state.value.failure)
                 store.disconnect()
                 store.shutdown()
                 store = ProfileStore(context)
