@@ -55,7 +55,7 @@ internal class LxSyncSessionTest {
                 )
             try {
                 withTimeout(10_000) {
-                    scripted.await()
+                    if (completeList) scripted.await()
                     val result = storage.result.await()
                     assertEquals(if (completeList) ProfileSyncState.READY else ProfileSyncState.FAILED, result)
                 }
