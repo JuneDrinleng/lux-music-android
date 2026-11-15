@@ -47,7 +47,7 @@ prepare_server.py 只从固定 d47aca4 导出独立部署副本，npm ci 忽略�
 
 ## 设计与交付
 
-[连接补充交互稿](design/lx-connection-preview.html) 复用原 HTML 最终 CSS 和 MingCute 返回图标，覆盖本机使用、服务器与 HTTP 确认、连接码、初次合并/覆盖确认、资料切换及退出/删除范围。评审控件在产品预览之外。Playwright 已验证 HTTP 确认、认证跳转和覆盖取消；不是原生截图验收。
+[连接补充交互稿](design/lx-connection-preview.html) 复用原 HTML 最终 CSS 和 MingCute 返回图标，覆盖本机使用、服务器与 HTTP 确认、连接码、初次合并/覆盖确认、资料切换及退出/删除范围。评审控件在产品预览之外。Playwright 已验证 HTTP 确认、加载/认证跳转、覆盖取消、退出后资料保留、删除取消与确认；另提供网络/证书/协议/拒绝/限流/授权失效评审状态。不是原生截图验收。
 
 按 docs/design/README.md 的“经 June 审阅形成验收基准”，原生可见页面仍等待确认。其他 HTML 不改。完整音乐页面、播放/音源、Android 后台常驻同步、ARM 真机及发行恢复仍不在本次已完成声明中。
 
