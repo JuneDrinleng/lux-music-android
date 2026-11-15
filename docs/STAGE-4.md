@@ -1,6 +1,6 @@
 # Stage 4：资料与 LX 连接
 
-2026-11-15。实施中，LX 首版、Lux 后置，原服务端保持不变。补充连接设计已形成[交互评审稿](design/lx-connection-preview.html)，尚待 June 审阅；当前 App 仍为启动画布，没有将未审阅页面接入原生界面。
+2026-11-15。数据/网络基座已通过双设备门槛，原生连接页待审阅。LX 首版、Lux 后置，原服务端保持不变。补充连接设计已形成[交互评审稿](design/lx-connection-preview.html)，尚待 June 审阅；当前 App 仍为启动画布，没有将未审阅页面接入原生界面。
 
 ## 已实现的边界
 
@@ -25,6 +25,19 @@ OkHttp 4.12.0，禁用认证请求自动重试及所有重定向，保留子路�
 ## 验证与复现
 
 本地 28 项 data JVM 测试通过、0 跳过：原有协议/Node 互操作，入站顺序，5 项真实 HTTP MockWebServer 测试、2 项模块完成时序测试，以及原版 ListDataManage 的 12 动作逐步 JSON/MD5 对照。本地 verify（格式、Detekt、架构、JVM、Lint、debug APK）与 data 测试 APK 构建通过；最终设备结果另记，不能把构建成功算设备通过。
+
+### 已执行的 CI 结果
+
+[Verify #10](https://github.com/JuneDrinleng/lux-music-android/actions/runs/43672968625) 全绿：build-checks、两套设备和 required-checks 均成功。被验证的源提交为 `50187159ef857616cfea459f4ab9ce7344c31bbf`，PR 合成提交为 `5ad6a4bf7ea4b9ea3bb1c79aef2d751e082449f9`。
+
+| 设备 | 实际页大小 | data 主套件 | prepare / force-stop / recover | QuickJS |
+| --- | --- | --- | --- | --- |
+| API 33 | 4096 | 10 通过 | 1 + 1 通过 | 6 通过 |
+| API 36 | 16384 | 10 通过 | 1 + 1 通过 | 6 通过 |
+
+两端 data 原始 JUnit 均严格核对为 12 项、0 失败、0 错误、0 跳过；共执行 36 项设备用例。API 33 job `132686861693`，API 36 job `132686861860`，构建 job `132686861914`。设备脚本在测试前通过 `getconf PAGE_SIZE` 核验页大小，测试 APK targetSdk=36。初轮授权拒绝 fixture 缺少设备名，已修正并完整重跑，没有放宽断言或跳过测试。报告和原版服务日志随该 run 的设备 artifacts 保存，超过保留期后可按下述固定脚本重现。
+
+本次仅证明本节覆盖的模拟器行为；原生连接 UI、完整音乐业务、后台常驻和正式签名发行仍未验收。
 
 设备矩阵沿用 API 33 / 4096 页与 API 36 / 实际 16384 页，测试 APK targetSdk 与应用同为 36：
 
