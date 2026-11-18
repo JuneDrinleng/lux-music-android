@@ -48,3 +48,11 @@
 - message2call 使用 LX lockfile 的实际 0.1.3 发布包校验和，不将 Git tag 内置 dist 当成部署包，不切换到 v2。
 - 不自动更新 vectors.json；来源/合同改变时在同一 PR 审阅生成器与向量。fixture DER 密钥是公开样例，永不用于真实部署。
 - 唯一已记录的加密 Lint 例外是 LX v4 wire 所需的 LxCrypto.crypt/ECB；本地凭据仍用 Keystore，其他检查保持阻断。
+
+## 音源与设备门槛
+
+- QuickJS 固定 3.2.3；验证边界见 docs/STAGE-3.md。不把测试 preload 或其 JS 宿主打包进应用，不复制 RN bridge。
+- 引擎只能在隔离 UID 进程、专属线程运行；独立看门狗终止超时进程，不以协程取消替代 native 执行终止。
+- required-checks 必须等待 API 33 和 API 36 / 16 KB 页设备测试；同时检查最终 APK 全部原生库的 ABI、ELF 与 ZIP 对齐。不能只检查 AAR 或将编译通过叫运行验证。
+- SHA-256 确认与 ABI 检查在执行前完成。业务宿主、网络代理、完整脚本兼容仍须另行接入验证；当前 sandbox 是内部验证边界，不对外承诺 SourceResolver 已实现。
+- 用户本轮指定耳机图标覆盖旧启动图标；当前资源为附件转换版，来源见 docs/STAGE-3.md。其他 HTML 设计要求不变。

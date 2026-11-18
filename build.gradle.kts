@@ -87,6 +87,7 @@ tasks.register("verify") {
         ":core:model:test",
         ":core:api:test",
         ":data:testDebugUnitTest",
+        ":source-runtime:testDebugUnitTest",
         ":app:lintDebug",
         ":app:assembleDebug",
     )

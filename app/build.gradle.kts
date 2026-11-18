@@ -13,6 +13,18 @@ val target = LuxVersion.parse(versionProperties.getProperty("stableVersion"))
 
 android {
     namespace = "cn.lux.music.android"
+    androidResources {
+        // The upstream AAR includes its own development samples; do not ship them in Lux.
+        ignoreAssetsPattern =
+            listOf(
+                ignoreAssetsPattern.orEmpty(),
+                "test_assert_define.js",
+                "test_base_module1.mjs",
+                "test_base_module2.mjs",
+                "test_module_import_dynamic.js",
+                "test_polyfill_date.js",
+            ).joinToString(":")
+    }
     defaultConfig {
         applicationId = "cn.lux.music.android"
         versionCode = target.code(1)

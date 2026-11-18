@@ -1,0 +1,10 @@
+mobile-user-api-preload.js is an unchanged test fixture from:
+JuneDrinleng/lux-music-mobile commit 702113391333c463049c0f7b449ff2c02b3758ba
+android/app/src/main/assets/script/user-api-preload.js
+SHA-256 e0e892ea9472e190aef6f16996ebcd6bec077f7d8659ceb87a30830d8a53fe41
+
+Derived from LX Music Mobile, Copyright lyswhut and contributors.
+Apache License 2.0; see Apache-2.0.txt. The upstream Lux LICENSE-NOTICE.md
+states that upstream-derived portions remain Apache-2.0. This file is not
+listed as Lux Proprietary. No RN bridge code is included.
+This fixture and the test host do not ship in the production APK.

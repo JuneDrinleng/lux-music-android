@@ -1,0 +1,10 @@
+QuickJS Wrapper 3.2.3
+https://github.com/HarlonWang/quickjs-wrapper
+Copyright Harlon Wang and contributors. Apache License 2.0.
+See quickjs-wrapper-Apache-2.0.txt.
+
+QuickJS JavaScript Engine
+Copyright (c) 2017-2021 Fabrice Bellard and Charlie Gordon.
+MIT License; see quickjs-MIT.txt.
+
+Lux uses the published Maven binaries without modifying or forking the engine.

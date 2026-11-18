@@ -654,6 +654,39 @@
           "url": "https://github.com/finamp-app/finamp/blob/5cd29afec3e72ad90cdeab0df9ce16c857867173/lib/components/LoginScreen/login_authentication_page.dart"
         }
       ]
+    },
+    {
+      "id": "quickjs-wrapper-stage3",
+      "group": "source-runtime",
+      "repository": "HarlonWang/quickjs-wrapper",
+      "observed_ref": "main",
+      "commit": "c5f5027aafe754108fcb4af12e183a7633c39e85",
+      "observed_on": "2026-11-14",
+      "purpose": "Stage 3 绑定接口、Promise job loop、console 默认行为及许可证只读核对",
+      "license_observation": "Wrapper Apache-2.0; QuickJS engine MIT",
+      "review_mode": "static-source-review; Maven binary/device evidence recorded separately",
+      "files": [
+        {
+          "path": "wrapper-java/src/main/java/com/whl/quickjs/wrapper/QuickJSContext.java",
+          "url": "https://github.com/HarlonWang/quickjs-wrapper/blob/c5f5027aafe754108fcb4af12e183a7633c39e85/wrapper-java/src/main/java/com/whl/quickjs/wrapper/QuickJSContext.java"
+        },
+        {
+          "path": "wrapper-android/src/main/java/com/whl/quickjs/android/QuickJSLoader.java",
+          "url": "https://github.com/HarlonWang/quickjs-wrapper/blob/c5f5027aafe754108fcb4af12e183a7633c39e85/wrapper-android/src/main/java/com/whl/quickjs/android/QuickJSLoader.java"
+        },
+        {
+          "path": "native/cpp/quickjs_wrapper.cpp",
+          "url": "https://github.com/HarlonWang/quickjs-wrapper/blob/c5f5027aafe754108fcb4af12e183a7633c39e85/native/cpp/quickjs_wrapper.cpp"
+        },
+        {
+          "path": "native/cpp/quickjs_extend_libraries.h",
+          "url": "https://github.com/HarlonWang/quickjs-wrapper/blob/c5f5027aafe754108fcb4af12e183a7633c39e85/native/cpp/quickjs_extend_libraries.h"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/HarlonWang/quickjs-wrapper/blob/c5f5027aafe754108fcb4af12e183a7633c39e85/LICENSE"
+        }
+      ]
     }
   ],
   "web_sources": [
@@ -733,6 +766,22 @@
       "dist_sha256": "e60f226619e81a0c700aeb72ede193cd14ca5e0d119c7830dd97fb89381b623e",
       "observed_on": "2026-11-14",
       "evidence": "LX d47aca4 package-lock.json; verified tarball, executed published dist in contract oracle"
+    },
+    {
+      "name": "wang.harlon.quickjs:wrapper-android",
+      "version": "3.2.3",
+      "url": "https://repo.maven.apache.org/maven2/wang/harlon/quickjs/wrapper-android/3.2.3/wrapper-android-3.2.3.aar",
+      "sha256": "b1d0c550818f07e411b6e6f0eb21b28d83ed2e227d6129395be9e5a2167f4f0c",
+      "observed_on": "2026-11-14",
+      "evidence": "Downloaded release AAR; all four ABI PT_LOAD p_align=0x4000. Runtime results recorded separately in docs/STAGE-3.md."
+    },
+    {
+      "name": "wang.harlon.quickjs:wrapper-java:sources",
+      "version": "3.2.3",
+      "url": "https://repo.maven.apache.org/maven2/wang/harlon/quickjs/wrapper-java/3.2.3/wrapper-java-3.2.3-sources.jar",
+      "sha256": "a2f895e3195a6c7b408032848a2ed410e36f512821fe4b1b39ca83e89a9d4955",
+      "observed_on": "2026-11-14",
+      "evidence": "Published Java API has memory/stack limits and no public execution interrupt; not inferred from latest Git source."
     }
   ]
 }

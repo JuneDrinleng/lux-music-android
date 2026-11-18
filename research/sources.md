@@ -267,3 +267,7 @@
 ## Stage 2 发布包校验补充
 
 message2call 的实际 0.1.3 发布包通过 LX lockfile SHA-512 校验，并用于 Node 互操作；Git tag 内置 dist 与发布包不同。完整核验与限制见 [08](08-lx-published-artifact.md)，产物信息已补入 sources.json 的 artifacts，不改变原始源码观察记录。
+
+## Stage 3 绑定验证补充
+
+QuickJS 3.2.3 AAR 与发布 Java 源码的实际检查见 [09](09-quickjs-stage3.md)，固定产物哈希已补入 sources.json。设备结果在 docs/STAGE-3.md 单独记录；原始研究的“未运行”观察不自动升级为设备兼容声明。
