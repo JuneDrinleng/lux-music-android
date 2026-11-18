@@ -1,0 +1,727 @@
+{
+  "research_date": "2026-11-14",
+  "repositories": [
+    {
+      "id": "mobile",
+      "group": "mobile",
+      "repository": "JuneDrinleng/lux-music-mobile",
+      "observed_ref": "master",
+      "commit": "702113391333c463049c0f7b449ff2c02b3758ba",
+      "commit_date": "2026-11-12",
+      "observed_on": "2026-11-14",
+      "purpose": "RN 业务、账号与发布基线",
+      "license_observation": "Apache-2.0 派生部分 + Lux 原创声明，逐文件核查",
+      "review_mode": "static-source-review; not built or run",
+      "files": [
+        {
+          "path": "package.json",
+          "url": "https://github.com/JuneDrinleng/lux-music-mobile/blob/702113391333c463049c0f7b449ff2c02b3758ba/package.json"
+        },
+        {
+          "path": "LICENSE-NOTICE.md",
+          "url": "https://github.com/JuneDrinleng/lux-music-mobile/blob/702113391333c463049c0f7b449ff2c02b3758ba/LICENSE-NOTICE.md"
+        },
+        {
+          "path": "src/utils/loginSession.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-mobile/blob/702113391333c463049c0f7b449ff2c02b3758ba/src/utils/loginSession.ts"
+        },
+        {
+          "path": "src/utils/accountSpaceSwitch.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-mobile/blob/702113391333c463049c0f7b449ff2c02b3758ba/src/utils/accountSpaceSwitch.ts"
+        },
+        {
+          "path": "src/utils/loginCredentialRepository.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-mobile/blob/702113391333c463049c0f7b449ff2c02b3758ba/src/utils/loginCredentialRepository.ts"
+        },
+        {
+          "path": "src/utils/luxAuthApi.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-mobile/blob/702113391333c463049c0f7b449ff2c02b3758ba/src/utils/luxAuthApi.ts"
+        },
+        {
+          "path": "src/utils/serverCheck.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-mobile/blob/702113391333c463049c0f7b449ff2c02b3758ba/src/utils/serverCheck.ts"
+        },
+        {
+          "path": "src/utils/dataSpace/index.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-mobile/blob/702113391333c463049c0f7b449ff2c02b3758ba/src/utils/dataSpace/index.ts"
+        },
+        {
+          "path": "src/core/appSession/coordinator.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-mobile/blob/702113391333c463049c0f7b449ff2c02b3758ba/src/core/appSession/coordinator.ts"
+        },
+        {
+          "path": "src/core/appSession/index.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-mobile/blob/702113391333c463049c0f7b449ff2c02b3758ba/src/core/appSession/index.ts"
+        },
+        {
+          "path": "src/utils/sessionFence.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-mobile/blob/702113391333c463049c0f7b449ff2c02b3758ba/src/utils/sessionFence.ts"
+        },
+        {
+          "path": "src/screens/Login/AuthFlow.tsx",
+          "url": "https://github.com/JuneDrinleng/lux-music-mobile/blob/702113391333c463049c0f7b449ff2c02b3758ba/src/screens/Login/AuthFlow.tsx"
+        },
+        {
+          "path": "src/screens/Login/ServerStep.tsx",
+          "url": "https://github.com/JuneDrinleng/lux-music-mobile/blob/702113391333c463049c0f7b449ff2c02b3758ba/src/screens/Login/ServerStep.tsx"
+        },
+        {
+          "path": "src/screens/Account/AccountSpaces.tsx",
+          "url": "https://github.com/JuneDrinleng/lux-music-mobile/blob/702113391333c463049c0f7b449ff2c02b3758ba/src/screens/Account/AccountSpaces.tsx"
+        },
+        {
+          "path": "src/plugins/sync/client/auth.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-mobile/blob/702113391333c463049c0f7b449ff2c02b3758ba/src/plugins/sync/client/auth.ts"
+        },
+        {
+          "path": "src/plugins/sync/client/client.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-mobile/blob/702113391333c463049c0f7b449ff2c02b3758ba/src/plugins/sync/client/client.ts"
+        },
+        {
+          "path": "src/plugins/sync/client/credentials.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-mobile/blob/702113391333c463049c0f7b449ff2c02b3758ba/src/plugins/sync/client/credentials.ts"
+        },
+        {
+          "path": "src/plugins/sync/client/session.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-mobile/blob/702113391333c463049c0f7b449ff2c02b3758ba/src/plugins/sync/client/session.ts"
+        },
+        {
+          "path": "src/plugins/sync/client/sync/handler.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-mobile/blob/702113391333c463049c0f7b449ff2c02b3758ba/src/plugins/sync/client/sync/handler.ts"
+        },
+        {
+          "path": "src/plugins/sync/client/modules/list/handler.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-mobile/blob/702113391333c463049c0f7b449ff2c02b3758ba/src/plugins/sync/client/modules/list/handler.ts"
+        },
+        {
+          "path": "src/plugins/sync/listEvent.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-mobile/blob/702113391333c463049c0f7b449ff2c02b3758ba/src/plugins/sync/listEvent.ts"
+        },
+        {
+          "path": "src/utils/playHistory/wire.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-mobile/blob/702113391333c463049c0f7b449ff2c02b3758ba/src/utils/playHistory/wire.ts"
+        },
+        {
+          "path": "src/core/download/model.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-mobile/blob/702113391333c463049c0f7b449ff2c02b3758ba/src/core/download/model.ts"
+        },
+        {
+          "path": "src/core/init/userApi/index.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-mobile/blob/702113391333c463049c0f7b449ff2c02b3758ba/src/core/init/userApi/index.ts"
+        },
+        {
+          "path": "src/utils/nativeModules/userApi.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-mobile/blob/702113391333c463049c0f7b449ff2c02b3758ba/src/utils/nativeModules/userApi.ts"
+        },
+        {
+          "path": "android/app/src/main/java/cn/lux/music/mobile/crypto/AES.java",
+          "url": "https://github.com/JuneDrinleng/lux-music-mobile/blob/702113391333c463049c0f7b449ff2c02b3758ba/android/app/src/main/java/cn/lux/music/mobile/crypto/AES.java"
+        },
+        {
+          "path": "android/app/src/main/java/cn/lux/music/mobile/crypto/RSA.java",
+          "url": "https://github.com/JuneDrinleng/lux-music-mobile/blob/702113391333c463049c0f7b449ff2c02b3758ba/android/app/src/main/java/cn/lux/music/mobile/crypto/RSA.java"
+        },
+        {
+          "path": ".github/workflows/ci.yml",
+          "url": "https://github.com/JuneDrinleng/lux-music-mobile/blob/702113391333c463049c0f7b449ff2c02b3758ba/.github/workflows/ci.yml"
+        },
+        {
+          "path": ".github/workflows/release.yml",
+          "url": "https://github.com/JuneDrinleng/lux-music-mobile/blob/702113391333c463049c0f7b449ff2c02b3758ba/.github/workflows/release.yml"
+        },
+        {
+          "path": "src/utils/nativeModules/crypto.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-mobile/blob/702113391333c463049c0f7b449ff2c02b3758ba/src/utils/nativeModules/crypto.ts"
+        },
+        {
+          "path": "src/plugins/sync/utils.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-mobile/blob/702113391333c463049c0f7b449ff2c02b3758ba/src/plugins/sync/utils.ts"
+        },
+        {
+          "path": "src/plugins/sync/client/utils.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-mobile/blob/702113391333c463049c0f7b449ff2c02b3758ba/src/plugins/sync/client/utils.ts"
+        }
+      ]
+    },
+    {
+      "id": "mobile-dev",
+      "group": "mobile",
+      "repository": "JuneDrinleng/lux-music-mobile",
+      "observed_ref": "dev",
+      "commit": "4f75d71b318426f86364ad22bf949955a5d7ca41",
+      "commit_date": "2026-11-12",
+      "observed_on": "2026-11-14",
+      "purpose": "开发分支对照与源运行时",
+      "license_observation": "同仓库逐文件声明",
+      "review_mode": "static-source-review; not built or run",
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/JuneDrinleng/lux-music-mobile/blob/4f75d71b318426f86364ad22bf949955a5d7ca41/README.md"
+        },
+        {
+          "path": "src/core/init/userApi/request.js",
+          "url": "https://github.com/JuneDrinleng/lux-music-mobile/blob/4f75d71b318426f86364ad22bf949955a5d7ca41/src/core/init/userApi/request.js"
+        },
+        {
+          "path": "src/utils/nativeModules/userApi.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-mobile/blob/4f75d71b318426f86364ad22bf949955a5d7ca41/src/utils/nativeModules/userApi.ts"
+        },
+        {
+          "path": "src/utils/recommend/service.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-mobile/blob/4f75d71b318426f86364ad22bf949955a5d7ca41/src/utils/recommend/service.ts"
+        },
+        {
+          "path": "src/utils/playHistory/tracker.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-mobile/blob/4f75d71b318426f86364ad22bf949955a5d7ca41/src/utils/playHistory/tracker.ts"
+        }
+      ]
+    },
+    {
+      "id": "lux-server",
+      "group": "lux-server",
+      "repository": "JuneDrinleng/lux-music-server",
+      "observed_ref": "master",
+      "commit": "7834abd66bb4363e75cbd72f59d8ba1988eae99d",
+      "commit_date": "2026-10-08",
+      "observed_on": "2026-11-14",
+      "purpose": "旧 Lux 账号与核心协议",
+      "license_observation": "Apache-2.0（仓库 LICENSE）",
+      "review_mode": "static-source-review; not built or run",
+      "files": [
+        {
+          "path": "src/server/api/auth.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-server/blob/7834abd66bb4363e75cbd72f59d8ba1988eae99d/src/server/api/auth.ts"
+        },
+        {
+          "path": "src/server/api/authGuard.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-server/blob/7834abd66bb4363e75cbd72f59d8ba1988eae99d/src/server/api/authGuard.ts"
+        },
+        {
+          "path": "src/server/api/sync.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-server/blob/7834abd66bb4363e75cbd72f59d8ba1988eae99d/src/server/api/sync.ts"
+        },
+        {
+          "path": "src/server/api/me.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-server/blob/7834abd66bb4363e75cbd72f59d8ba1988eae99d/src/server/api/me.ts"
+        },
+        {
+          "path": "src/server/app.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-server/blob/7834abd66bb4363e75cbd72f59d8ba1988eae99d/src/server/app.ts"
+        },
+        {
+          "path": "src/account/token.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-server/blob/7834abd66bb4363e75cbd72f59d8ba1988eae99d/src/account/token.ts"
+        },
+        {
+          "path": "src/server/server.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-server/blob/7834abd66bb4363e75cbd72f59d8ba1988eae99d/src/server/server.ts"
+        },
+        {
+          "path": "src/modules/index.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-server/blob/7834abd66bb4363e75cbd72f59d8ba1988eae99d/src/modules/index.ts"
+        },
+        {
+          "path": "docs/sync-server-mobile-flow.md",
+          "url": "https://github.com/JuneDrinleng/lux-music-server/blob/7834abd66bb4363e75cbd72f59d8ba1988eae99d/docs/sync-server-mobile-flow.md"
+        }
+      ]
+    },
+    {
+      "id": "lux-server-dev",
+      "group": "lux-server",
+      "repository": "JuneDrinleng/lux-music-server",
+      "observed_ref": "dev",
+      "commit": "794fcc4cfee03cdc12c56dad0272f116e3f0d8a9",
+      "commit_date": "2026-10-18",
+      "observed_on": "2026-11-14",
+      "purpose": "新 Lux 会话、发现、注册与扩展",
+      "license_observation": "Apache-2.0（仓库 LICENSE）",
+      "review_mode": "static-source-review; not built or run",
+      "files": [
+        {
+          "path": "src/server/api/auth.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-server/blob/794fcc4cfee03cdc12c56dad0272f116e3f0d8a9/src/server/api/auth.ts"
+        },
+        {
+          "path": "src/server/api/sync.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-server/blob/794fcc4cfee03cdc12c56dad0272f116e3f0d8a9/src/server/api/sync.ts"
+        },
+        {
+          "path": "src/server/api/me.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-server/blob/794fcc4cfee03cdc12c56dad0272f116e3f0d8a9/src/server/api/me.ts"
+        },
+        {
+          "path": "src/server/app.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-server/blob/794fcc4cfee03cdc12c56dad0272f116e3f0d8a9/src/server/app.ts"
+        },
+        {
+          "path": "src/account/token.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-server/blob/794fcc4cfee03cdc12c56dad0272f116e3f0d8a9/src/account/token.ts"
+        },
+        {
+          "path": "src/account/sessions.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-server/blob/794fcc4cfee03cdc12c56dad0272f116e3f0d8a9/src/account/sessions.ts"
+        },
+        {
+          "path": "src/modules/index.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-server/blob/794fcc4cfee03cdc12c56dad0272f116e3f0d8a9/src/modules/index.ts"
+        },
+        {
+          "path": "src/modules/playHistory/protocol.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-server/blob/794fcc4cfee03cdc12c56dad0272f116e3f0d8a9/src/modules/playHistory/protocol.ts"
+        },
+        {
+          "path": "src/modules/together/protocol.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-server/blob/794fcc4cfee03cdc12c56dad0272f116e3f0d8a9/src/modules/together/protocol.ts"
+        },
+        {
+          "path": "src/types/list_sync.d.ts",
+          "url": "https://github.com/JuneDrinleng/lux-music-server/blob/794fcc4cfee03cdc12c56dad0272f116e3f0d8a9/src/types/list_sync.d.ts"
+        },
+        {
+          "path": "package-lock.json",
+          "url": "https://github.com/JuneDrinleng/lux-music-server/blob/794fcc4cfee03cdc12c56dad0272f116e3f0d8a9/package-lock.json"
+        }
+      ]
+    },
+    {
+      "id": "lx-server",
+      "group": "lx-server",
+      "repository": "lyswhut/lx-music-sync-server",
+      "observed_ref": "master",
+      "commit": "d47aca4284a7c4d9ef755df1f44fb0b0a5b2af36",
+      "commit_date": "2025-01-18",
+      "observed_on": "2026-11-14",
+      "purpose": "原版 LX v4 协议",
+      "license_observation": "Apache-2.0",
+      "review_mode": "static-source-review; not built or run",
+      "files": [
+        {
+          "path": "package.json",
+          "url": "https://github.com/lyswhut/lx-music-sync-server/blob/d47aca4284a7c4d9ef755df1f44fb0b0a5b2af36/package.json"
+        },
+        {
+          "path": "package-lock.json",
+          "url": "https://github.com/lyswhut/lx-music-sync-server/blob/d47aca4284a7c4d9ef755df1f44fb0b0a5b2af36/package-lock.json"
+        },
+        {
+          "path": "src/constants.ts",
+          "url": "https://github.com/lyswhut/lx-music-sync-server/blob/d47aca4284a7c4d9ef755df1f44fb0b0a5b2af36/src/constants.ts"
+        },
+        {
+          "path": "src/server/server.ts",
+          "url": "https://github.com/lyswhut/lx-music-sync-server/blob/d47aca4284a7c4d9ef755df1f44fb0b0a5b2af36/src/server/server.ts"
+        },
+        {
+          "path": "src/server/auth.ts",
+          "url": "https://github.com/lyswhut/lx-music-sync-server/blob/d47aca4284a7c4d9ef755df1f44fb0b0a5b2af36/src/server/auth.ts"
+        },
+        {
+          "path": "src/server/sync/sync.ts",
+          "url": "https://github.com/lyswhut/lx-music-sync-server/blob/d47aca4284a7c4d9ef755df1f44fb0b0a5b2af36/src/server/sync/sync.ts"
+        },
+        {
+          "path": "src/utils/tools.ts",
+          "url": "https://github.com/lyswhut/lx-music-sync-server/blob/d47aca4284a7c4d9ef755df1f44fb0b0a5b2af36/src/utils/tools.ts"
+        },
+        {
+          "path": "src/modules/list/sync/sync.ts",
+          "url": "https://github.com/lyswhut/lx-music-sync-server/blob/d47aca4284a7c4d9ef755df1f44fb0b0a5b2af36/src/modules/list/sync/sync.ts"
+        },
+        {
+          "path": "src/modules/list/utils.ts",
+          "url": "https://github.com/lyswhut/lx-music-sync-server/blob/d47aca4284a7c4d9ef755df1f44fb0b0a5b2af36/src/modules/list/utils.ts"
+        },
+        {
+          "path": "src/modules/dislike/utils.ts",
+          "url": "https://github.com/lyswhut/lx-music-sync-server/blob/d47aca4284a7c4d9ef755df1f44fb0b0a5b2af36/src/modules/dislike/utils.ts"
+        },
+        {
+          "path": "src/types/music.d.ts",
+          "url": "https://github.com/lyswhut/lx-music-sync-server/blob/d47aca4284a7c4d9ef755df1f44fb0b0a5b2af36/src/types/music.d.ts"
+        },
+        {
+          "path": "src/types/list_sync.d.ts",
+          "url": "https://github.com/lyswhut/lx-music-sync-server/blob/d47aca4284a7c4d9ef755df1f44fb0b0a5b2af36/src/types/list_sync.d.ts"
+        }
+      ]
+    },
+    {
+      "id": "message2call",
+      "group": "message2call",
+      "repository": "lyswhut/message2call",
+      "observed_ref": "v0.1.3",
+      "commit": "2a5c8b966dc689271c2d5c47ad02587cb896ede3",
+      "commit_date": "2023-09-14",
+      "observed_on": "2026-11-14",
+      "purpose": "实际 lockfile 依赖版本的 RPC 格式",
+      "license_observation": "MIT",
+      "review_mode": "static-source-review; not built or run",
+      "files": [
+        {
+          "path": "package.json",
+          "url": "https://github.com/lyswhut/message2call/blob/2a5c8b966dc689271c2d5c47ad02587cb896ede3/package.json"
+        },
+        {
+          "path": "src/index.ts",
+          "url": "https://github.com/lyswhut/message2call/blob/2a5c8b966dc689271c2d5c47ad02587cb896ede3/src/index.ts"
+        },
+        {
+          "path": "types/common.d.ts",
+          "url": "https://github.com/lyswhut/message2call/blob/2a5c8b966dc689271c2d5c47ad02587cb896ede3/types/common.d.ts"
+        }
+      ]
+    },
+    {
+      "id": "nia",
+      "group": "nia",
+      "repository": "android/nowinandroid",
+      "observed_ref": "main",
+      "commit": "2982e63cb691ad49cd009aab43dc206fee6699c2",
+      "commit_date": "2026-10-20",
+      "observed_on": "2026-11-14",
+      "purpose": "官方分层、模块、离线数据、CI",
+      "license_observation": "Apache-2.0",
+      "review_mode": "static-source-review; not built or run",
+      "files": [
+        {
+          "path": "docs/ArchitectureLearningJourney.md",
+          "url": "https://github.com/android/nowinandroid/blob/2982e63cb691ad49cd009aab43dc206fee6699c2/docs/ArchitectureLearningJourney.md"
+        },
+        {
+          "path": "docs/ModularizationLearningJourney.md",
+          "url": "https://github.com/android/nowinandroid/blob/2982e63cb691ad49cd009aab43dc206fee6699c2/docs/ModularizationLearningJourney.md"
+        },
+        {
+          "path": "settings.gradle.kts",
+          "url": "https://github.com/android/nowinandroid/blob/2982e63cb691ad49cd009aab43dc206fee6699c2/settings.gradle.kts"
+        },
+        {
+          "path": "core/data/src/main/kotlin/com/google/samples/apps/nowinandroid/core/data/repository/OfflineFirstTopicsRepository.kt",
+          "url": "https://github.com/android/nowinandroid/blob/2982e63cb691ad49cd009aab43dc206fee6699c2/core/data/src/main/kotlin/com/google/samples/apps/nowinandroid/core/data/repository/OfflineFirstTopicsRepository.kt"
+        },
+        {
+          "path": "feature/foryou/impl/src/main/kotlin/com/google/samples/apps/nowinandroid/feature/foryou/impl/ForYouViewModel.kt",
+          "url": "https://github.com/android/nowinandroid/blob/2982e63cb691ad49cd009aab43dc206fee6699c2/feature/foryou/impl/src/main/kotlin/com/google/samples/apps/nowinandroid/feature/foryou/impl/ForYouViewModel.kt"
+        },
+        {
+          "path": ".github/workflows/Build.yaml",
+          "url": "https://github.com/android/nowinandroid/blob/2982e63cb691ad49cd009aab43dc206fee6699c2/.github/workflows/Build.yaml"
+        },
+        {
+          "path": ".github/workflows/Release.yml",
+          "url": "https://github.com/android/nowinandroid/blob/2982e63cb691ad49cd009aab43dc206fee6699c2/.github/workflows/Release.yml"
+        }
+      ]
+    },
+    {
+      "id": "auxio",
+      "group": "auxio",
+      "repository": "OxygenCobalt/Auxio",
+      "observed_ref": "dev",
+      "commit": "f243bceab0b55fdae7462723a3d14e7eec21a432",
+      "commit_date": "2026-11-01",
+      "observed_on": "2026-11-14",
+      "purpose": "原生播放状态、持久化和系统/UI 边界",
+      "license_observation": "GPL-3.0，具体文件 GPL-3.0-or-later",
+      "review_mode": "static-source-review; not built or run",
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/OxygenCobalt/Auxio/blob/f243bceab0b55fdae7462723a3d14e7eec21a432/README.md"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/OxygenCobalt/Auxio/blob/f243bceab0b55fdae7462723a3d14e7eec21a432/LICENSE"
+        },
+        {
+          "path": "app/src/main/java/org/oxycblt/auxio/playback/state/PlaybackStateManager.kt",
+          "url": "https://github.com/OxygenCobalt/Auxio/blob/f243bceab0b55fdae7462723a3d14e7eec21a432/app/src/main/java/org/oxycblt/auxio/playback/state/PlaybackStateManager.kt"
+        },
+        {
+          "path": "app/src/main/java/org/oxycblt/auxio/playback/persist/PersistenceRepository.kt",
+          "url": "https://github.com/OxygenCobalt/Auxio/blob/f243bceab0b55fdae7462723a3d14e7eec21a432/app/src/main/java/org/oxycblt/auxio/playback/persist/PersistenceRepository.kt"
+        },
+        {
+          "path": ".github/workflows/android.yml",
+          "url": "https://github.com/OxygenCobalt/Auxio/blob/f243bceab0b55fdae7462723a3d14e7eec21a432/.github/workflows/android.yml"
+        },
+        {
+          "path": "app/src/main/java/org/oxycblt/auxio/playback/PlaybackViewModel.kt",
+          "url": "https://github.com/OxygenCobalt/Auxio/blob/f243bceab0b55fdae7462723a3d14e7eec21a432/app/src/main/java/org/oxycblt/auxio/playback/PlaybackViewModel.kt"
+        },
+        {
+          "path": "app/src/main/java/org/oxycblt/auxio/playback/service/ExoPlaybackStateHolder.kt",
+          "url": "https://github.com/OxygenCobalt/Auxio/blob/f243bceab0b55fdae7462723a3d14e7eec21a432/app/src/main/java/org/oxycblt/auxio/playback/service/ExoPlaybackStateHolder.kt"
+        }
+      ]
+    },
+    {
+      "id": "metrolist",
+      "group": "metrolist",
+      "repository": "MetrolistGroup/Metrolist",
+      "observed_ref": "main",
+      "commit": "e6fea3b36c68841bad21daa6252e1d69ecd3afbe",
+      "commit_date": "2026-11-03",
+      "observed_on": "2026-11-14",
+      "purpose": "Compose/Media3 实际应用及账号登录反例",
+      "license_observation": "GPL-3.0",
+      "review_mode": "static-source-review; not built or run",
+      "files": [
+        {
+          "path": "settings.gradle.kts",
+          "url": "https://github.com/MetrolistGroup/Metrolist/blob/e6fea3b36c68841bad21daa6252e1d69ecd3afbe/settings.gradle.kts"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/MetrolistGroup/Metrolist/blob/e6fea3b36c68841bad21daa6252e1d69ecd3afbe/LICENSE"
+        },
+        {
+          "path": "app/src/main/kotlin/com/metrolist/music/playback/MusicService.kt",
+          "url": "https://github.com/MetrolistGroup/Metrolist/blob/e6fea3b36c68841bad21daa6252e1d69ecd3afbe/app/src/main/kotlin/com/metrolist/music/playback/MusicService.kt"
+        },
+        {
+          "path": "app/src/main/kotlin/com/metrolist/music/ui/screens/LoginScreen.kt",
+          "url": "https://github.com/MetrolistGroup/Metrolist/blob/e6fea3b36c68841bad21daa6252e1d69ecd3afbe/app/src/main/kotlin/com/metrolist/music/ui/screens/LoginScreen.kt"
+        },
+        {
+          "path": "app/src/main/kotlin/com/metrolist/music/viewmodels/AccountViewModel.kt",
+          "url": "https://github.com/MetrolistGroup/Metrolist/blob/e6fea3b36c68841bad21daa6252e1d69ecd3afbe/app/src/main/kotlin/com/metrolist/music/viewmodels/AccountViewModel.kt"
+        },
+        {
+          "path": ".github/workflows/build.yml",
+          "url": "https://github.com/MetrolistGroup/Metrolist/blob/e6fea3b36c68841bad21daa6252e1d69ecd3afbe/.github/workflows/build.yml"
+        },
+        {
+          "path": ".github/workflows/build_pr.yml",
+          "url": "https://github.com/MetrolistGroup/Metrolist/blob/e6fea3b36c68841bad21daa6252e1d69ecd3afbe/.github/workflows/build_pr.yml"
+        },
+        {
+          "path": ".github/workflows/release.yml",
+          "url": "https://github.com/MetrolistGroup/Metrolist/blob/e6fea3b36c68841bad21daa6252e1d69ecd3afbe/.github/workflows/release.yml"
+        }
+      ]
+    },
+    {
+      "id": "seal",
+      "group": "seal",
+      "repository": "JunkFood02/Seal",
+      "observed_ref": "main",
+      "commit": "7677f61a20fda4210e84215fef9e9b51d25daa47",
+      "commit_date": "2026-09-25",
+      "observed_on": "2026-11-14",
+      "purpose": "下载任务与 CI 划分",
+      "license_observation": "GPL-3.0",
+      "review_mode": "static-source-review; not built or run",
+      "files": [
+        {
+          "path": "settings.gradle.kts",
+          "url": "https://github.com/JunkFood02/Seal/blob/7677f61a20fda4210e84215fef9e9b51d25daa47/settings.gradle.kts"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/JunkFood02/Seal/blob/7677f61a20fda4210e84215fef9e9b51d25daa47/LICENSE"
+        },
+        {
+          "path": "app/src/main/java/com/junkfood/seal/download/Task.kt",
+          "url": "https://github.com/JunkFood02/Seal/blob/7677f61a20fda4210e84215fef9e9b51d25daa47/app/src/main/java/com/junkfood/seal/download/Task.kt"
+        },
+        {
+          "path": "app/src/main/java/com/junkfood/seal/download/TaskFactory.kt",
+          "url": "https://github.com/JunkFood02/Seal/blob/7677f61a20fda4210e84215fef9e9b51d25daa47/app/src/main/java/com/junkfood/seal/download/TaskFactory.kt"
+        },
+        {
+          "path": "app/src/main/java/com/junkfood/seal/download/DownloaderV2.kt",
+          "url": "https://github.com/JunkFood02/Seal/blob/7677f61a20fda4210e84215fef9e9b51d25daa47/app/src/main/java/com/junkfood/seal/download/DownloaderV2.kt"
+        },
+        {
+          "path": ".github/workflows/android.yml",
+          "url": "https://github.com/JunkFood02/Seal/blob/7677f61a20fda4210e84215fef9e9b51d25daa47/.github/workflows/android.yml"
+        },
+        {
+          "path": ".github/workflows/android_ci.yml",
+          "url": "https://github.com/JunkFood02/Seal/blob/7677f61a20fda4210e84215fef9e9b51d25daa47/.github/workflows/android_ci.yml"
+        }
+      ]
+    },
+    {
+      "id": "tempo",
+      "group": "tempo",
+      "repository": "CappielloAntonio/tempo",
+      "observed_ref": "main",
+      "commit": "9cf62c8c0c8d90e26be971570c797836dcf0d575",
+      "commit_date": "2025-01-31",
+      "observed_on": "2026-11-14",
+      "purpose": "原生自托管音乐登录和服务器配置",
+      "license_observation": "GPL-3.0",
+      "review_mode": "static-source-review; not built or run",
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/CappielloAntonio/tempo/blob/9cf62c8c0c8d90e26be971570c797836dcf0d575/LICENSE"
+        },
+        {
+          "path": "app/src/main/java/com/cappielloantonio/tempo/viewmodel/LoginViewModel.java",
+          "url": "https://github.com/CappielloAntonio/tempo/blob/9cf62c8c0c8d90e26be971570c797836dcf0d575/app/src/main/java/com/cappielloantonio/tempo/viewmodel/LoginViewModel.java"
+        },
+        {
+          "path": "app/src/main/java/com/cappielloantonio/tempo/repository/ServerRepository.java",
+          "url": "https://github.com/CappielloAntonio/tempo/blob/9cf62c8c0c8d90e26be971570c797836dcf0d575/app/src/main/java/com/cappielloantonio/tempo/repository/ServerRepository.java"
+        },
+        {
+          "path": "app/src/main/java/com/cappielloantonio/tempo/ui/dialog/ServerSignupDialog.java",
+          "url": "https://github.com/CappielloAntonio/tempo/blob/9cf62c8c0c8d90e26be971570c797836dcf0d575/app/src/main/java/com/cappielloantonio/tempo/ui/dialog/ServerSignupDialog.java"
+        },
+        {
+          "path": "app/src/main/res/layout/dialog_server_signup.xml",
+          "url": "https://github.com/CappielloAntonio/tempo/blob/9cf62c8c0c8d90e26be971570c797836dcf0d575/app/src/main/res/layout/dialog_server_signup.xml"
+        },
+        {
+          "path": "app/src/main/res/layout/fragment_login.xml",
+          "url": "https://github.com/CappielloAntonio/tempo/blob/9cf62c8c0c8d90e26be971570c797836dcf0d575/app/src/main/res/layout/fragment_login.xml"
+        }
+      ]
+    },
+    {
+      "id": "jellyfin",
+      "group": "jellyfin",
+      "repository": "jellyfin/jellyfin-android",
+      "observed_ref": "master",
+      "commit": "44b94e659e432cf41a90a2079b801a2c71128c23",
+      "commit_date": "2026-11-12",
+      "observed_on": "2026-11-14",
+      "purpose": "原生连接外壳（主客户端为 Web wrapper）",
+      "license_observation": "GPL-2.0",
+      "review_mode": "static-source-review; not built or run",
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/jellyfin/jellyfin-android/blob/44b94e659e432cf41a90a2079b801a2c71128c23/README.md"
+        },
+        {
+          "path": "app/src/main/java/org/jellyfin/mobile/ui/screens/connect/ServerSelection.kt",
+          "url": "https://github.com/jellyfin/jellyfin-android/blob/44b94e659e432cf41a90a2079b801a2c71128c23/app/src/main/java/org/jellyfin/mobile/ui/screens/connect/ServerSelection.kt"
+        },
+        {
+          "path": "app/src/main/java/org/jellyfin/mobile/data/entity/ServerUser.kt",
+          "url": "https://github.com/jellyfin/jellyfin-android/blob/44b94e659e432cf41a90a2079b801a2c71128c23/app/src/main/java/org/jellyfin/mobile/data/entity/ServerUser.kt"
+        },
+        {
+          "path": "app/src/main/java/org/jellyfin/mobile/data/entity/ServerEntity.kt",
+          "url": "https://github.com/jellyfin/jellyfin-android/blob/44b94e659e432cf41a90a2079b801a2c71128c23/app/src/main/java/org/jellyfin/mobile/data/entity/ServerEntity.kt"
+        },
+        {
+          "path": ".github/workflows/app-test.yaml",
+          "url": "https://github.com/jellyfin/jellyfin-android/blob/44b94e659e432cf41a90a2079b801a2c71128c23/.github/workflows/app-test.yaml"
+        },
+        {
+          "path": "LICENSE.md",
+          "url": "https://github.com/jellyfin/jellyfin-android/blob/44b94e659e432cf41a90a2079b801a2c71128c23/LICENSE.md"
+        }
+      ]
+    },
+    {
+      "id": "finamp",
+      "group": "finamp",
+      "repository": "finamp-app/finamp",
+      "observed_ref": "redesign",
+      "commit": "5cd29afec3e72ad90cdeab0df9ce16c857867173",
+      "commit_date": "2026-11-13",
+      "observed_on": "2026-11-14",
+      "purpose": "Flutter，仅账号 UX 对照，不作原生架构依据",
+      "license_observation": "MPL-2.0",
+      "review_mode": "static-source-review; not built or run",
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/finamp-app/finamp/blob/5cd29afec3e72ad90cdeab0df9ce16c857867173/LICENSE"
+        },
+        {
+          "path": "lib/components/LoginScreen/login_flow.dart",
+          "url": "https://github.com/finamp-app/finamp/blob/5cd29afec3e72ad90cdeab0df9ce16c857867173/lib/components/LoginScreen/login_flow.dart"
+        },
+        {
+          "path": "lib/components/LoginScreen/login_server_selection_page.dart",
+          "url": "https://github.com/finamp-app/finamp/blob/5cd29afec3e72ad90cdeab0df9ce16c857867173/lib/components/LoginScreen/login_server_selection_page.dart"
+        },
+        {
+          "path": "lib/components/LoginScreen/login_user_selection_page.dart",
+          "url": "https://github.com/finamp-app/finamp/blob/5cd29afec3e72ad90cdeab0df9ce16c857867173/lib/components/LoginScreen/login_user_selection_page.dart"
+        },
+        {
+          "path": "lib/components/LoginScreen/login_authentication_page.dart",
+          "url": "https://github.com/finamp-app/finamp/blob/5cd29afec3e72ad90cdeab0df9ce16c857867173/lib/components/LoginScreen/login_authentication_page.dart"
+        }
+      ]
+    }
+  ],
+  "web_sources": [
+    {
+      "title": "Spotify login",
+      "url": "https://accounts.spotify.com/en/login",
+      "observed_on": "2026-11-14",
+      "evidence": "已打开公开页面文本；第一步 email/continue 和其他登录选项，未提交"
+    },
+    {
+      "title": "Spotify signup",
+      "url": "https://www.spotify.com/signup",
+      "observed_on": "2026-11-14",
+      "evidence": "已打开，重定向 jp；第一步 email/next，未提交"
+    },
+    {
+      "title": "Apple Music Android",
+      "url": "https://support.apple.com/en-us/109340",
+      "observed_on": "2026-11-14",
+      "evidence": "官方支持流程，未操作 app"
+    },
+    {
+      "title": "TIDAL signup",
+      "url": "https://support.tidal.com/hc/en-us/articles/115003671729-Sign-up-for-Tidal",
+      "observed_on": "2026-11-14",
+      "evidence": "官方注册说明；登录根 URL 另返回 404，未完成动态流程"
+    },
+    {
+      "title": "Symfonium providers",
+      "url": "https://docs.symfonium.app/wiki/settings/settings-manage-media-providers/",
+      "observed_on": "2026-11-14",
+      "evidence": "官方 provider 管理页，含列表及添加入口说明"
+    },
+    {
+      "title": "Symfonium WebDAV",
+      "url": "https://docs.symfonium.app/wiki/providers/webdav-media-provider-configuration/",
+      "observed_on": "2026-11-14",
+      "evidence": "官方配置页，URL/登录/路径与连接验证"
+    },
+    {
+      "title": "Android architecture",
+      "url": "https://developer.android.com/topic/architecture/recommendations",
+      "observed_on": "2026-11-14",
+      "evidence": "官方架构建议，非强制模板"
+    },
+    {
+      "title": "Media3 background",
+      "url": "https://developer.android.com/media/media3/session/background-playback",
+      "observed_on": "2026-11-14",
+      "evidence": "Player/Session 服务生命周期"
+    },
+    {
+      "title": "Media3 downloads",
+      "url": "https://developer.android.com/media/media3/exoplayer/downloading-media",
+      "observed_on": "2026-11-14",
+      "evidence": "DownloadService/Manager/Index"
+    },
+    {
+      "title": "GitHub secure use",
+      "url": "https://docs.github.com/en/actions/reference/security/secure-use",
+      "observed_on": "2026-11-14",
+      "evidence": "Actions 最小权限/依赖固定/不受信代码边界"
+    },
+    {
+      "title": "GitHub protected branches",
+      "url": "https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches",
+      "observed_on": "2026-11-14",
+      "evidence": "分支保护与必需检查概念"
+    }
+  ]
+}
