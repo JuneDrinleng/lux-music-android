@@ -13,3 +13,5 @@ Stage 1 已建立可构建的原生工程和 debug APK，包含 Hilt、模块边
 Stage 3 已通过 QuickJS 3.2.3 的 API 33 / API 36（16 KB 页）隔离、终止与恢复测试，并接入耳机图标。完整音源宿主、导入和业务页面尚未接入；设备证据与 debug 下载见 Stage 3 文档。
 
 构建与验证命令见 [Stage 1](docs/STAGE-1.md)、[Stage 2](docs/STAGE-2.md) 和 [Stage 3](docs/STAGE-3.md)。远端检查与保护启用按路线图分别记录。
+
+后续阶段测试版通过 GitHub Release 的 dev 预发布交付，版本格式 `vX.Y.Z-dev.N`，提供可直接安装的 APK；规则见 [开发发布](docs/RELEASE-FLOW.md)。当前历史 Actions 下载链接仍保留作验证记录。

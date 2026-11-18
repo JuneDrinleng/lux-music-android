@@ -1,7 +1,7 @@
 name: Verify
 on:
   pull_request:
-    branches: [main, dev, codex/roadmap, codex/stage-1-foundation, codex/stage-2-lx-protocol]
+    branches: [main, dev, codex/roadmap, codex/stage-1-foundation, codex/stage-2-lx-protocol, codex/stage-3-source-runtime]
   push:
     branches: [main, dev]
 permissions:
@@ -35,6 +35,8 @@ jobs:
         run: |
           python3 scripts/lx-contract/prepare.py
           node --experimental-vm-modules scripts/lx-contract/generate.mjs --check
+      - name: Build pinned original LX integration deployment
+        run: python3 scripts/lx-contract/prepare_server.py
       - name: Install pinned Android SDK
         run: python3 scripts/setup_android_ci.py
       - name: Verify Gradle wrapper
@@ -60,6 +62,8 @@ jobs:
             app/build/outputs/apk/debug/*.apk
             **/build/reports/**
   source-runtime-devices:
+    env:
+      LUX_LX_SOURCE: ${{ github.workspace }}/.contract-upstream/lx
     runs-on: ubuntu-24.04
     timeout-minutes: 40
     strategy:
@@ -80,6 +84,18 @@ jobs:
         with:
           distribution: temurin
           java-version: '21.0.13+9'
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '24.22.1'
+      - name: Checkout pinned LX integration server
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          repository: lyswhut/lx-music-sync-server
+          ref: d47aca4284a7c4d9ef755df1f44fb0b0a5b2af36
+          path: .contract-upstream/lx
+          persist-credentials: false
+      - name: Build pinned original LX integration deployment
+        run: python3 scripts/lx-contract/prepare_server.py
       - name: Install pinned Android SDK
         run: python3 scripts/setup_android_ci.py
       - name: Enable emulator hardware acceleration
@@ -95,6 +111,9 @@ jobs:
             source-runtime/build/device-evidence/**
             source-runtime/build/reports/**
             source-runtime/build/outputs/androidTest-results/**
+            data/build/device-evidence/**
+            data/build/reports/**
+            data/build/outputs/androidTest-results/**
   required-checks:
     runs-on: ubuntu-24.04
     if: always()

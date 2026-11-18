@@ -19,6 +19,24 @@ import org.junit.Test
 @OptIn(kotlinx.coroutines.ExperimentalCoroutinesApi::class)
 class LxRpcPeerTest {
     @Test
+    fun incomingHandlersRegisterInReceiveOrderBeforeDispatch() =
+        runTest {
+            val seen = mutableListOf<String>()
+            val suspended = kotlinx.coroutines.CompletableDeferred<Unit>()
+            val peer =
+                LxRpcPeer(backgroundScope, {}, { path, _ ->
+                    seen += path.single()
+                    suspended.await()
+                    LxRpcResult.Absent
+                })
+            val codec = LxRpcCodec()
+            peer.receive(codec.encode(LxRpcFrame.Call("one", listOf("one"), emptyList())))
+            peer.receive(codec.encode(LxRpcFrame.Call("two", listOf("two"), emptyList())))
+            assertEquals(listOf("one", "two"), seen)
+            peer.close()
+        }
+
+    @Test
     fun nestedCallCanReceiveReplyWhileOriginalHandlerIsSuspended() =
         runTest {
             lateinit var first: LxRpcPeer

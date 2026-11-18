@@ -3,6 +3,7 @@ package cn.lux.music.data.sync.lx
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.CoroutineStart
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.job
@@ -104,7 +105,7 @@ internal class LxRpcPeer(
             }
             activeHandlers++
         }
-        scope.launch { respond(call) }
+        scope.launch(start = CoroutineStart.UNDISPATCHED) { respond(call) }
     }
 
     private suspend fun respond(call: LxRpcFrame.Call) {

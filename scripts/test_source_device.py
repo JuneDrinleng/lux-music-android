@@ -1,9 +1,15 @@
 """Run isolated QuickJS tests on a real Android emulator; fail on boot/page-size drift."""
 from pathlib import Path
 import os
+import json
+import shutil
+import xml.etree.ElementTree as ET
 import subprocess
 import sys
 import time
+
+sys.path.insert(0, str(Path(__file__).resolve().parent / "lx-contract"))
+from fixture_server import deployment
 
 api = sys.argv[1]
 image = sys.argv[2]
@@ -62,10 +68,48 @@ with (reports / 'emulator.log').open('w') as log:
             raise RuntimeError(f'Expected {page_size} byte pages, got {actual}')
         (reports / 'device.txt').write_text(f'API={api}\nimage={package}\nrevision={revision}\nPAGE_SIZE={actual}\n')
         device('shell', 'input', 'keyevent', '82', check=True)
-        subprocess.run([
-            './gradlew', ':source-runtime:connectedDebugAndroidTest', '--console=plain',
-            '-Pandroid.testInstrumentationRunnerArguments.expectedPageSize=' + page_size,
-        ], check=True, timeout=900)
+        def run_tests(tasks, arguments):
+            subprocess.run([
+                './gradlew', *tasks, '--console=plain',
+                '-Pandroid.injected.androidTest.leaveApksInstalledAfterRun=true',
+                '-Pandroid.testInstrumentationRunnerArguments.expectedPageSize=' + page_size,
+                *arguments,
+            ], check=True, timeout=900)
+
+        def archive_data_phase(name, expected):
+            source = Path('data/build/outputs/androidTest-results/connected/debug')
+            target = Path('data/build/device-evidence') / name
+            shutil.copytree(source, target, dirs_exist_ok=True)
+            totals = dict(tests=0, failures=0, errors=0, skipped=0)
+            for xml in source.rglob('TEST-*.xml'):
+                suite = ET.parse(xml).getroot()
+                for key in totals:
+                    totals[key] += int(suite.get(key, '0'))
+            if totals != dict(tests=expected, failures=0, errors=0, skipped=0):
+                raise RuntimeError(f'{name} JUnit count mismatch: {totals}')
+            print(name, totals)
+
+        restart = 'cn.lux.music.data.profile.ProfileRestartTest'
+        with deployment():
+            run_tests([':source-runtime:connectedDebugAndroidTest', ':data:connectedDebugAndroidTest'], [
+                '-Pandroid.testInstrumentationRunnerArguments.notClass=' + restart,
+                '-Pandroid.testInstrumentationRunnerArguments.lxEndpoint=http://10.0.2.2:19528/proxy',
+            ])
+            archive_data_phase('suite', 10)
+            run_tests([':data:connectedDebugAndroidTest'], [
+                '-Pandroid.testInstrumentationRunnerArguments.class=' + restart + '#prepare',
+            ])
+            archive_data_phase('restart-prepare', 1)
+            metadata = json.loads(Path('data/build/outputs/apk/androidTest/debug/output-metadata.json').read_text())
+            test_package = metadata['applicationId']
+            if test_package != 'cn.lux.music.data.test':
+                raise RuntimeError('Unexpected force-stop target')
+            device('shell', 'am', 'force-stop', test_package, check=True)
+            run_tests([':data:connectedDebugAndroidTest'], [
+                '-Pandroid.testInstrumentationRunnerArguments.class=' + restart + '#recover',
+            ])
+            archive_data_phase('restart-recover', 1)
+
     except Exception:
         log.flush()
         print((reports / 'emulator.log').read_text()[-8000:])

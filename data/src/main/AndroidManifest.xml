@@ -1,1 +1,6 @@
-<manifest />
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Android's transport permission is static. LxHttp requires explicit consent per HTTP endpoint,
+         disables all redirects and never downgrades HTTPS. No general cleartext client is exported. -->
+    <application android:usesCleartextTraffic="true" />
+</manifest>

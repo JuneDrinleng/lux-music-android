@@ -6,7 +6,7 @@
 
 - Kotlin、Compose、Hilt；minSdk 33，compileSdk/targetSdk 36。
 - 首先兼容固定版本 LX v4 协议，服务端保持原样。
-- 首个测试版完成搜索、音源、歌单、队列、后台播放、歌词、LX 双向同步和恢复。
+- 首个核心功能测试版完成搜索、音源、歌单、队列、后台播放、歌词、LX 双向同步和恢复；此前阶段 dev 可按最新交付规则预发布。
 - 现有 HTML 是视觉/交互基准，仅补充本机模式、LX 连接和资料切换设计。
 - dev 集成、main 稳定；通过短分支 PR 开发。
 - 包名 cn.lux.music.android；开发/稳定版共用包名、签名和数据，与 mobile 并存。
@@ -70,6 +70,14 @@ main ──回合并 PR / merge commit──→ dev
 
 main/dev 禁止直接推送和 force push，已发布 tag 不移动。main 不启用阻止 merge commit 的线性历史规则。单维护者由 June 审阅合入，结合必需检查和解决讨论，不设置阻塞本人 PR 的外部批准要求；有独立审阅者后增加。
 
+### 阶段测试版交付（2026-11-15 用户更新）
+
+后续可安装的阶段测试版直接通过 GitHub Release 交付，标记 `prerelease=true`、`latest=false`，附可直接下载安装的 APK、SHA-256 和对应源码提交，不再仅提供会过期的 Actions ZIP。Actions artifacts 继续用于检查报告与内部诊断。
+
+版本格式为 `v<major>.<minor>.<patch>-dev.<N>`，例如 `v0.0.1-dev.1`、`v0.0.1-dev.2`；APK versionName 对应去掉 tag 前缀 `v` 的值。基础版本以 version.properties 为唯一来源；用户此次举例不单独重置现有 0.1.0 基线或降低 versionCode。序号按已占用 tag 递增，源码变化使用新序号，不覆盖旧资产。
+
+用户已授权后续合格的 dev tag 和预发布直接执行，无需每轮再问是否发测试包。阶段 dev 可以早于完整音乐闭环，说明必须如实列出已实现功能与缺口；发布前仍完成对应构建、签名和设备检查，不等待 Pages/feed 接入。dev 尚未建立时，可从已验证且明确记录的阶段提交交付，不为发包自动合并 PR；dev 建立后按合入触发自动发行。稳定发行及远程配置授权不由此扩大。
+
 ### 自动构建与发行
 
 | 触发 | 行为 |
@@ -109,7 +117,7 @@ GitHub Pages 使用部署 artifact，不回写 main/dev、不建 feed 源码分�
 | 工程基础 | 模块、Hilt、固定工具链、公共构建配置、debug APK、必需检查；纯 Kotlin/依赖白名单可执行 | Stage 1 已实施，见 docs/STAGE-1.md |
 | LX 协议验证 | 实际 Node 源码生成 codec/认证/同步 fixtures；双端方向和恢复验证，不修改 server | Stage 2 已通过协议互操作，真实网络待后续接入 |
 | 音源验证 | QuickJS ABI、隔离、取消、死循环、16 KB 页和所选 ABI；失败停止功能集成 | Stage 3 隔离/16 KB 设备验证通过；完整宿主未接入，见 docs/STAGE-3.md |
-| 数据与连接 | Room、本机模式、LX 连接、加密凭据、切换、初次同步；先补连接设计基准 | 未实施 |
+| 数据与连接 | Room、本机模式、LX 连接、加密凭据、切换、初次同步；先补连接设计基准 | Stage 4 数据/网络基座及双设备恢复验证通过，原生连接页待设计审阅；见 docs/STAGE-4.md |
 | 音乐核心闭环 | 搜索/音源 → 歌单 → 队列 → 后台播放/歌词 → 双向同步 | 未实施 |
 | 首次发行 | 签名、前向升级、失败恢复演练后启用自动 dev；稳定保留审批 | 未实施 |
 | 后续能力 | HTML/mobile 功能对照逐项完成，再启动 Lux 专项 | 未实施 |

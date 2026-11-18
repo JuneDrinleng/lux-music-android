@@ -5,7 +5,7 @@
 - mobile 仅作功能与真实协议对照，不复制 RN bridge、历史迁移、重复状态、占位源或厂商 flavor；v1 不读取 RN 私有数据。
 - 上游 LX/Lux server 保持只读，不改代码以适配客户端；未来后端变更另案，不阻塞 LX。
 - main 稳定、dev 集成；功能 squash 入 dev，转正及 main 回合并 dev 用 merge commit。不得直接推 main/dev、force push、移动已发布 tag。
-- PR #1（codex/roadmap）仅保留文档。工程按独立 stage 分支/PR 推进；父 PR 未合并时允许堆叠在所依赖的阶段分支，之后再按 dev 引导顺序转入，不将后阶段代码合回父阶段分支。合并、tag、Release、secrets、保护与发布环境不由工程基础阶段执行。
+- PR #1（codex/roadmap）仅保留文档。工程按独立 stage 分支/PR 推进；父 PR 未合并时允许堆叠在所依赖的阶段分支，之后再按 dev 引导顺序转入，不将后阶段代码合回父阶段分支。合并、secrets、保护与发布环境不由工程基础阶段执行；dev tag/Release 以文末最新交付授权为准。
 - 连接页按 docs/design/README.md 补充并审阅，其余 HTML 继续 1:1。不重新选择全站视觉风格，不用 WebView 实现主应用。
 - 不读取或打印凭据、全量环境变量/进程参数，不向他人发送消息。只读参考工作树不得修改、清理或提交。
 - 精确工具链在骨架 PR 构建验证后锁定。发行需经过协议/设备/签名/恢复测试，不能把静态检查叫端到端通过。
@@ -56,3 +56,10 @@
 - required-checks 必须等待 API 33 和 API 36 / 16 KB 页设备测试；同时检查最终 APK 全部原生库的 ABI、ELF 与 ZIP 对齐。不能只检查 AAR 或将编译通过叫运行验证。
 - SHA-256 确认与 ABI 检查在执行前完成。业务宿主、网络代理、完整脚本兼容仍须另行接入验证；当前 sandbox 是内部验证边界，不对外承诺 SourceResolver 已实现。
 - 用户本轮指定耳机图标覆盖旧启动图标；当前资源为附件转换版，来源见 docs/STAGE-3.md。其他 HTML 设计要求不变。
+
+## 开发版交付（2026-11-15 用户授权）
+
+- 后续阶段测试交付直接创建 GitHub dev 预发布，采用 `vX.Y.Z-dev.N`（如 `v0.0.1-dev.1`），标记 prerelease/latest=false，挂可安装 APK、SHA-256、源码提交与功能缺口说明；不再仅交付 Actions ZIP。
+- 用户已授权后续合格 dev tag/预发布，无需重复确认；对应构建、签名和设备验证仍须完成。dev 未建立时可基于已验证阶段提交发包，不自动合并 PR。
+- 基础版本读取 version.properties；本次示例不构成重置 0.1.0 或降低 versionCode 的要求。序号递增，已发布 tag/资产不覆盖。完整规则见 docs/RELEASE-FLOW.md。
+- 此授权不扩展为稳定发行、PR 合并或远程配置变更。当前仅记录未来交付要求，不能声称已启用发行工作流或已发布。
