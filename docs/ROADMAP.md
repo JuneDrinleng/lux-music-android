@@ -8,7 +8,7 @@
 | --- | --- | --- |
 | 文档收敛 | 同一 PR #1 整合研究、架构、LX 协议、资料模型、路线图和发行方案，保留 HTML | 已交付 PR #1，待合入 |
 | 工程基础 | 模块、Hilt、固定工具链、公共构建配置、debug APK、必需检查；纯 Kotlin/依赖白名单可执行 | Stage 1 本地验证通过，独立 PR 待合入 |
-| LX 协议验证 | 实际 Node 源码生成 codec/认证/同步 fixtures；双端方向和恢复验证，不修改 server | 未实施 |
+| LX 协议验证 | 实际 Node 源码生成 codec/认证/同步 fixtures；双端方向和恢复验证，不修改 server | Stage 2 本地协议验证通过；真实网络/持久化同步后续接入 |
 | 音源验证 | QuickJS ABI、隔离、取消、死循环、16 KB 页和所选 ABI；失败停止功能集成 | 未实施 |
 | 数据与连接 | Room、本机模式、LX 连接、加密凭据、切换、初次同步；先补连接设计基准 | 未实施 |
 | 音乐核心闭环 | 搜索/音源 → 歌单 → 队列 → 后台播放/歌词 → 双向同步 | 未实施 |
@@ -38,4 +38,6 @@ SDK 33/36、Hilt、包名、本机模式、LX 首版、Lux 后续、独立空间
 
 PR #1 尚未合入时，Stage 1 分支 codex/stage-1-foundation 从它建立，并以 codex/roadmap 为临时 PR 基线，仅显示工程增量。PR #1 合入 main 后建立 dev，将 Stage 1 PR 改投 dev；不把工程 PR 合入文档分支。dev 引导完成后移除 verify workflow 的临时 codex/roadmap 分支过滤。
 
-下一阶段优先 LX 协议 fixtures：从固定上游 Node 代码生成可追溯向量，验证 AES/RSA、压缩、message2call 0.1.3、快照 MD5/方向与失败恢复；服务端只读。不等待 Lux 接口或发布 secrets。
+Stage 2 已按 [验证记录](STAGE-2.md) 完成上述纯协议工作。分支 codex/stage-2-lx-protocol 临时以 Stage 1 为 PR 基线，父 PR 合入并建立 dev 后按依赖顺序改投；不将后阶段代码合回前阶段分支。
+
+下一阶段为 QuickJS 音源验证：绑定/ABI/16 KB 页、脚本协议、隔离与可终止性。其后在数据与连接阶段接入 Room、真实 HTTP/WebSocket、资料切换及连接页；Lux 不作前置。

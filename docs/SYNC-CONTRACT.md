@@ -1,11 +1,11 @@
 # 原版 LX Music 同步契约（首版）
 
-2026-11-14。首版目标是原版 LX sync server，不依赖 Lux REST。以下为固定源码核实，尚无 Kotlin/Node 联调或设备运行结论；不得改 server 使测试通过。
+2026-11-14。首版目标是原版 LX sync server，不依赖 Lux REST。Stage 2 已完成纯协议 Kotlin/Node 互操作与 Android 构建验证，尚未完成真实 HTTP/WS 部署或设备同步；不得改 server 使测试通过。详情见 [Stage 2](STAGE-2.md)。
 
 ## 固定证据
 
 - [LX server d47aca4](https://github.com/lyswhut/lx-music-sync-server/tree/d47aca4284a7c4d9ef755df1f44fb0b0a5b2af36)（package 2.1.2）：src/server/auth.ts、server.ts、app.ts，src/constants.ts、src/utils/tools.ts，src/server/sync/，src/modules/list/，src/types/list*.d.ts、music.d.ts。
-- [message2call v0.1.3](https://github.com/lyswhut/message2call/tree/2a5c8b966dc689271c2d5c47ad02587cb896ede3)，不是当前 v2。
+- message2call 以 LX lockfile 的 0.1.3 实际 npm 发布包及 SHA-512 为运行基准；[Git tag](https://github.com/lyswhut/message2call/tree/2a5c8b966dc689271c2d5c47ad02587cb896ede3) 的 dist 与发布包不同，见 [核验记录](../research/08-lx-published-artifact.md)。不能使用当前 v2。
 - [mobile 研究快照](https://github.com/JuneDrinleng/lux-music-mobile/tree/702113391333c463049c0f7b449ff2c02b3758ba) 提供客户端对照；[研究](../research/02-protocol-compatibility.md) 和 [来源](../research/sources.md) 给出逐文件证据。
 - 下方沿用的详细歌单清单以 Lux S:（794fcc4）和 mobile M:（3ab131e）为对照，原版 LX 类型/处理路径也在上述固定提交中；fixtures 必须以原版行为生成，不将 Lux 扩展误作 LX 保证。
 
@@ -90,4 +90,4 @@ SyncMode 来自 Lux 对照 S:`src/types/list_sync.d.ts`：merge_local_remote、m
 
 首版不启用 dislike、Lux 历史、一起听、设备命令、REST 登录/注册/刷新。未来 Lux 协议证据见 [归档](future/LUX-SYNC-CONTRACT.md)，不是当前实现合同。
 
-Node↔Kotlin 验证包括 AES/OAEP、UTF-8、base64/gzip、0.1.3 envelope、JSON 顺序/MD5；代理子路径、密钥拒绝、双客户端增量/三方合并/方向、响应丢失及重连必须联调。只读 server 源码不代表这些测试已通过。
+Node↔Kotlin 验证包括 AES/OAEP、UTF-8、base64/gzip、0.1.3 envelope、JSON 顺序/MD5；代理子路径、密钥拒绝、双客户端增量/三方合并/方向、响应丢失及重连必须联调。Stage 2 已验证 codec、内存宿主中的原版认证/同步 handler、方向及关闭/迟到响应；代理后的真实连接、双端增量和持久化恢复仍需后续服务联调。

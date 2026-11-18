@@ -5,7 +5,7 @@
 - mobile 仅作功能与真实协议对照，不复制 RN bridge、历史迁移、重复状态、占位源或厂商 flavor；v1 不读取 RN 私有数据。
 - 上游 LX/Lux server 保持只读，不改代码以适配客户端；未来后端变更另案，不阻塞 LX。
 - main 稳定、dev 集成；功能 squash 入 dev，转正及 main 回合并 dev 用 merge commit。不得直接推 main/dev、force push、移动已发布 tag。
-- PR #1（codex/roadmap）仅保留文档。工程按独立 stage 分支/PR 推进；PR #1 未合并时允许堆叠在该分支，之后再按 dev 引导顺序转入。合并、tag、Release、secrets、保护与发布环境不由工程基础阶段执行。
+- PR #1（codex/roadmap）仅保留文档。工程按独立 stage 分支/PR 推进；父 PR 未合并时允许堆叠在所依赖的阶段分支，之后再按 dev 引导顺序转入，不将后阶段代码合回父阶段分支。合并、tag、Release、secrets、保护与发布环境不由工程基础阶段执行。
 - 连接页按 docs/design/README.md 补充并审阅，其余 HTML 继续 1:1。不重新选择全站视觉风格，不用 WebView 实现主应用。
 - 不读取或打印凭据、全量环境变量/进程参数，不向他人发送消息。只读参考工作树不得修改、清理或提交。
 - 精确工具链在骨架 PR 构建验证后锁定。发行需经过协议/设备/签名/恢复测试，不能把静态检查叫端到端通过。
@@ -41,3 +41,10 @@
 - 每次交付说明修改内容、实际执行的验证和剩余差异。没有运行浏览器/模拟器/设备就明确说明，不能声称“已 1:1 验收”。
 - Android 工程按 plan.md 的 Kotlin/Compose 架构实施；启动骨架不算业务页面或 1:1 验收。
 - 未经用户要求，不自动向远程推送、合并或发布；本地文件可先完成并供检查。
+
+## LX 协议验证
+
+- data 的协议修改须运行 Stage 2 黄金回归与原版 Node oracle；CI 必须设置 LUX_LX_SOURCE，不能将 3 项 oracle 测试跳过计为互操作通过。
+- message2call 使用 LX lockfile 的实际 0.1.3 发布包校验和，不将 Git tag 内置 dist 当成部署包，不切换到 v2。
+- 不自动更新 vectors.json；来源/合同改变时在同一 PR 审阅生成器与向量。fixture DER 密钥是公开样例，永不用于真实部署。
+- 唯一已记录的加密 Lint 例外是 LX v4 wire 所需的 LxCrypto.crypt/ECB；本地凭据仍用 Keystore，其他检查保持阻断。
