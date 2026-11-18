@@ -37,10 +37,10 @@ def check_elf(data):
         raise RuntimeError('No ELF load segments')
 
 
-def main():
-    with zipfile.ZipFile(APK) as apk:
+def verify(apk_path, expected_abis):
+    with zipfile.ZipFile(apk_path) as apk:
         libs = [entry for entry in apk.infolist() if entry.filename.startswith('lib/') and entry.filename.endswith('.so')]
-        if {entry.filename.split('/')[1] for entry in libs} != EXPECTED:
+        if {entry.filename.split('/')[1] for entry in libs} != expected_abis:
             raise RuntimeError('APK ABI set differs from the architecture contract')
         for entry in libs:
             if entry.compress_type != zipfile.ZIP_STORED:
@@ -52,9 +52,9 @@ def main():
     sdk = os.environ.get('ANDROID_HOME') or os.environ.get('ANDROID_SDK_ROOT')
     if not sdk:
         sdk = next(line.removeprefix('sdk.dir=') for line in (ROOT / 'local.properties').read_text().splitlines() if line.startswith('sdk.dir='))
-    subprocess.run([str(Path(sdk) / 'build-tools/36.0.0/zipalign'), '-c', '-P', '16', '4', str(APK)], check=True)
+    subprocess.run([str(Path(sdk) / 'build-tools/36.0.0/zipalign'), '-c', '-P', '16', '4', str(apk_path)], check=True)
     print('APK ZIP alignment and required ABI set verified; runtime device tests remain separate')
 
 
 if __name__ == '__main__':
-    main()
+    verify(APK, EXPECTED)
