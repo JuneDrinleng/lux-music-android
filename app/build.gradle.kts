@@ -11,6 +11,8 @@ val versionProperties =
     }
 val target = LuxVersion.parse(versionProperties.getProperty("stableVersion"))
 
+val releaseSlot = providers.gradleProperty("luxReleaseSlot").orNull?.toInt()
+
 android {
     namespace = "cn.lux.music.android"
     androidResources {
@@ -27,8 +29,16 @@ android {
     }
     defaultConfig {
         applicationId = "cn.lux.music.android"
-        versionCode = target.code(1)
-        versionName = "$target-bootstrap"
+        versionCode = target.code(releaseSlot ?: 1)
+        versionName =
+            when (releaseSlot) {
+                null -> "$target-bootstrap"
+                999 -> target.toString()
+                else -> "$target-dev.$releaseSlot"
+            }
+    }
+    if (releaseSlot != null) {
+        packaging.jniLibs.excludes += "lib/x86_64/**"
     }
     buildTypes {
         debug {
@@ -48,7 +58,7 @@ dependencies {
     ksp(libs.hilt.compiler)
 }
 
-// Signing and public release allocation are intentionally not enabled in stage 1.
+// The release job signs the verified build-tools output outside Gradle.
 tasks.matching { it.name in setOf("assembleRelease", "bundleRelease", "packageRelease") }.configureEach {
-    doFirst { error("Public release is not enabled; follow docs/RELEASE-FLOW.md") }
+    doFirst { requireNotNull(releaseSlot) { "Specify luxReleaseSlot for a release build" } }
 }

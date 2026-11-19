@@ -1,6 +1,10 @@
 # 分支、PR、验证与发布基线
 
-2026-11-15，按用户最新交付要求修订。已有验证 workflow 和 debug 构建；签名 dev 发行 workflow 尚未启用，不能把本次规则更新称为已经发布。实施见 [路线图](ROADMAP.md)。
+## 工作流入口
+
+PR 运行 Verify；dev/main 推送由 Release 调用同一套 Verify（含两组设备），验证通过后才处理当前分支最新提交。dev 生成签名的通用 ARM APK 并公开预发布，main 创建带 APK 的稳定版草稿，维护者审阅后在 Releases 页面发布。dev/main 都可在 Actions 内手动重跑；首次合入前可在 PR 查看 debug APK。签名参数使用下方配置清单中的四个 Repository secrets 和一个 Repository variable。
+
+版本读取 version.properties。相同提交重跑沿用已占用 tag、恢复草稿和缺失资产；已公开的 Release 保持原样。main 的稳定版本号已被其他提交使用时跳过，下一轮开发先提高 stableVersion。APK 和 SHA256SUMS.txt 直接附在 Release 上。Pages 更新源另行接入。
 
 ## 3. 开发、PR 与发布
 
