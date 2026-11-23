@@ -86,6 +86,7 @@ tasks.register("verify") {
         architectureCheck,
         ":core:model:test",
         ":core:api:test",
+        ":feature:testDebugUnitTest",
         ":data:testDebugUnitTest",
         ":source-runtime:testDebugUnitTest",
         ":app:lintDebug",
